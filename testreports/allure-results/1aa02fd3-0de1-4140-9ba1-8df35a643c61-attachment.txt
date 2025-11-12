@@ -1,0 +1,3 @@
+[
+  "A real-time pricing and inventory validation mechanism (a rules-based pricing/fulfillment engine). It recalculates and validates seat availability, fare rules, taxes/fees, and ancillary pricing for the modified itinerary before presenting offers, ensuring only valid, accurate options are shown."
+]

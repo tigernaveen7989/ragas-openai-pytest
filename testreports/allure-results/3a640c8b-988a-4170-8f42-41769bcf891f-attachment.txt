@@ -1,0 +1,30 @@
+I’m not sure what domain you mean by “FF numbers.” Could you clarify what FF stands for here (e.g., fuel factor, friction factor, fusion factor, or something else) and what system you’re talking about (ride-sharing, transit, logistics, etc.)?
+
+If you’re talking a two-passenger, one-way ride-sharing scenario, here’s a generic way to think about it once FF is defined:
+
+- Two passengers, P1 and P2, each has an origin and a single one-way destination. The question is whether their trips can be combined on one vehicle without violating constraints (time, comfort, etc.).
+
+- FF numbers likely measure how compatible or profitable it is to merge the trips (e.g., lower FF = easy/beneficial to share; higher FF = unlikely or costly).
+
+What happens depending on FF:
+- If FF indicates high compatibility (low FF value):
+  - The trips are merged into a single route.
+  - Pickup order is chosen to minimize detours (often the closer origin is picked up first).
+  - The vehicle drops off passengers in an order that respects their destinations and minimizes total travel time/distance.
+  - The total cost/time for both passengers is typically lower than two separate trips, assuming detours are acceptable.
+
+- If FF indicates moderate compatibility:
+  - A partial merge might occur (shared leg from a common segment) with separate legs toward the final destinations.
+  - One passenger might be dropped off before the other if it shortens the route; or one trip might be split to maintain service quality.
+
+- If FF indicates low compatibility (high FF value):
+  - Trips stay separate; two distinct rides are scheduled.
+  - No sharing detour is introduced; each passenger gets a direct or near-direct ride.
+
+How you’d evaluate it in practice:
+- Define origins and destinations: O1 -> D1, O2 -> D2.
+- Compute potential merged route and any detours required.
+- Apply FF to judge whether the merge saves time/distance and whether detours stay within acceptable limits for both passengers.
+- Choose the option (shared route vs. separate trips) that minimizes total cost/time while meeting constraints (wait time, maximum detour, comfort).
+
+If you can tell me what FF stands for in your context and what system you’re modeling, I can tailor the explanation and give a concrete example.

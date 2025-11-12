@@ -1,0 +1,1 @@
+When a seat or ancillary is free, only an AE is generated with HK1/CONFIRMED status, and no EMD is issued.

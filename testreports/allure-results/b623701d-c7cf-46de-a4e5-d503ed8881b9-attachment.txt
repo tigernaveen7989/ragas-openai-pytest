@@ -1,0 +1,1 @@
+Feature ensures that seat map and ancillary offers respect frequent flyer tier level benefits by marking items as free or discounted based on the passenger’s tier.

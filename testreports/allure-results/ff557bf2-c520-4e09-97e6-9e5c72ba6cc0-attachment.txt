@@ -1,0 +1,33 @@
+When adding seats or ancillaries (additional services or products) to an existing order, the following steps and considerations should typically occur:
+
+1. **Verify Order Eligibility**:  
+   - Ensure the existing order can be modified. Some orders may have restrictions based on the product, service, or timing (e.g., close to the delivery/event date).
+
+2. **Check Availability**:  
+   - Confirm that the additional seats or ancillaries are available. For example, in events or flights, seating capacity or specific services may be limited.
+
+3. **Update Pricing**:  
+   - Calculate and display the additional cost for the seats or ancillaries. Ensure the pricing is transparent and includes any taxes or fees.
+
+4. **Apply Discounts (if applicable)**:  
+   - If the customer is eligible for discounts (e.g., loyalty program, promotional codes), apply them to the additional items.
+
+5. **Update Order Summary**:  
+   - Provide a revised order summary showing the original order, the new additions, and the updated total cost.
+
+6. **Payment Processing**:  
+   - If the additions require additional payment, securely process the transaction. If the customer has a saved payment method, confirm before charging.
+
+7. **Confirmation and Receipt**:  
+   - Send a confirmation email or notification with the updated order details, including the new seats or ancillaries.
+
+8. **Inventory Management**:  
+   - Update the inventory or booking system to reflect the changes, ensuring the added seats or services are reserved.
+
+9. **Customer Support**:  
+   - Provide clear instructions on how to access or use the added seats/ancillaries (e.g., new tickets, service vouchers).
+
+10. **Cancellation/Refund Policy**:  
+    - Inform the customer of any changes to the cancellation or refund policy due to the additions.
+
+By following these steps, the process remains seamless, transparent, and customer-friendly.

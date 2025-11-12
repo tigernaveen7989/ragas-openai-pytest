@@ -1,0 +1,3 @@
+[
+  "In a two-passenger, one-way scenario with FF (Frequent Flyer) numbers, here's what typically happens:\n\n*   **Mileage accrual:** Both passengers, if they have FF numbers linked to their tickets, will earn miles for the flight. The exact amount depends on the airline, fare class, and distance flown.\n*   **Benefits:** Passengers may receive benefits based on their FF status, such as priority boarding, lounge access, or extra baggage allowance.\n*   **Record keeping:** The flight details and mileage earned will be recorded in each passenger's FF account.\n*   **Redemption:** The earned miles can be used later for award flights, upgrades, or other rewards offered by the airline."
+]

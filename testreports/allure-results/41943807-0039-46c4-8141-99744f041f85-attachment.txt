@@ -1,0 +1,1 @@
+OMS should use order version/timestamp validation to ensure consistency.

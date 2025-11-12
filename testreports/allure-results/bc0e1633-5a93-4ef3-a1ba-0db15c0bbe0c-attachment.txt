@@ -1,0 +1,1 @@
+In a two-passenger one-way scenario, both passengers with FF numbers receive discounted offers, and EMD and AE are generated accordingly.

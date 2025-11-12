@@ -1,0 +1,1 @@
+If seats/ancillaries are free (0.00), only AE is generated with HK1/CONFIRMED status.

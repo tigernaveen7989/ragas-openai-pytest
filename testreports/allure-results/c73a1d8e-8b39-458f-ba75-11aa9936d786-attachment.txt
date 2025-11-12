@@ -1,0 +1,27 @@
+When adding seats or ancillaries (like extra luggage, meals, or priority boarding) to an existing order, several things should typically happen to ensure a smooth and efficient process:
+
+1. **Availability Check**:  
+   The system should first verify if the selected seats or ancillary services are available for the current flight and booking. For example, it will check if there are vacant seats in the preferred class or if the specific ancillary service (like a special meal) can be added.
+
+2. **Price Update**:  
+   Once availability is confirmed, the cost of the additional seats or services should be calculated and added to the original booking. This could be based on the type of seat selected (e.g., extra legroom, business class) or the ancillary services chosen.
+
+3. **Payment Adjustment**:  
+   The customer should be prompted to confirm any additional charges for the added items. If there’s a price difference from the original booking, the payment should be updated accordingly, and the user should be asked to make the necessary payment.
+
+4. **Confirmation of Changes**:  
+   After the payment is processed, the system should provide the customer with a confirmation of the new additions. This can be in the form of an updated booking summary or a new confirmation email containing the updated details of the flight, seats, and any additional services.
+
+5. **Ticket/Booking Update**:  
+   The original order (or ticket) should be updated with the new information. If a seat change is involved, the seat map should be updated, and any pre-selected options (like meals or baggage allowances) should also be reflected in the updated booking.
+
+6. **Reissue or Update Ticket**:  
+   In some cases, the airline may need to issue a new ticket or modify the booking status to reflect the updated seating or ancillary options. For example, a seat upgrade could require a new boarding pass to be generated.
+
+7. **Customer Notification**:  
+   The customer should be notified through the booking system (via email, SMS, or app notification) confirming that the additional services have been successfully added, and they should receive any necessary details, such as new seat assignments or updated baggage allowances.
+
+8. **Customer Support Access**:  
+   Ensure that the customer is informed about how to contact customer support if there are any issues or further adjustments needed after the additions.
+
+In sum, adding seats or ancillaries should be seamless and clear, with price transparency, availability checks, and appropriate updates to both the system and the customer.

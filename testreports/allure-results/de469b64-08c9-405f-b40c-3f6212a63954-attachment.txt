@@ -1,0 +1,7 @@
+Real-time inventory and pricing validation.
+
+- Real-time inventory check: query the current seat map and ancillary stock to ensure availability.
+- Fare and rule validation: apply business rules (fare rules, eligibility, bundles, restrictions) to the modified option.
+- Repricing and reconciliation: recompute prices (fees, taxes, rules) and reconcile any differences before presenting offers.
+
+Together, these ensure offers during modifications are accurate and not stale.

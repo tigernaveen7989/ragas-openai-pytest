@@ -1,0 +1,5 @@
+{
+  "status": "error",
+  "error": "Rate limit exceeded. Please wait 5 seconds before making another request.",
+  "retry_after": 5
+}

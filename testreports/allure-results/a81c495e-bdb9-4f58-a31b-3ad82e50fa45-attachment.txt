@@ -1,0 +1,4 @@
+INFO     pytest_logger:conftest.py:76 Preparing data sample for singleturn RAGAS evaluation...
+INFO     pytest_logger:ironman.py:61 ---------------- API RESPONSE -------------------
+INFO     pytest_logger:ironman.py:62 {'response': 'Real-time inventory and pricing validation.\n\n- Real-time inventory check: query the current seat map and ancillary stock to ensure availability.\n- Fare and rule validation: apply business rules (fare rules, eligibility, bundles, restrictions) to the modified option.\n- Repricing and reconciliation: recompute prices (fees, taxes, rules) and reconcile any differences before presenting offers.\n\nTogether, these ensure offers during modifications are accurate and not stale.', 'status': 'success'}
+INFO     pytest_logger:test_loyalty_tier_offers.py:58 Context Recall Score: 0.0

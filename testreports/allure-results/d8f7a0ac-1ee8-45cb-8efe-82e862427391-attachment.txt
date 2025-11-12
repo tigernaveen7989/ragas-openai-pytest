@@ -1,0 +1,1 @@
+For a single passenger round trip with an FF#, the system should allow adding seats and ancillaries at discounted prices according to the passenger’s tier.
