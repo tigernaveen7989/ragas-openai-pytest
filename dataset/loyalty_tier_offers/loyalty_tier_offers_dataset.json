@@ -1,0 +1,67 @@
+[
+  {
+    "user_input": "What is the purpose of the Seat Map & Ancillary Offers feature with Frequent Flyer Tier Benefits?",
+    "reference_contexts": [
+      "Feature ensures that seat map and ancillary offers respect frequent flyer tier level benefits by marking items as free or discounted based on the passenger’s tier."
+    ],
+    "reference": "The purpose is to ensure seat map and ancillary offers reflect frequent flyer tier benefits, making certain items free or discounted according to the passenger's tier level.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "What happens when a seat or ancillary is free for a passenger?",
+    "reference_contexts": [
+      "If seats/ancillaries are free (0.00), only AE is generated with HK1/CONFIRMED status."
+    ],
+    "reference": "When a seat or ancillary is free, only an AE is generated with HK1/CONFIRMED status, and no EMD is issued.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "In a round trip for a single passenger with an FF#, what should the system do?",
+    "reference_contexts": [
+      "A paid air order with an FF# allows the user to add seats and ancillaries at a discounted price based on the passenger’s tier."
+    ],
+    "reference": "For a single passenger round trip with an FF#, the system should allow adding seats and ancillaries at discounted prices according to the passenger’s tier.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "How are tier benefits applied when two passengers have different frequent flyer tiers?",
+    "reference_contexts": [
+      "When two passengers traveling together have different frequent flyer tiers, each passenger typically receives benefits according to their individual tier level. For example, a Gold member receives Gold-tier perks, while a Silver member receives Silver-tier benefits. However, for shared benefits such as lounge access, some airlines may allow a higher-tier passenger to extend access to a companion depending on their policy."
+    ],
+    "reference": "When passengers have different frequent flyer tiers, each passenger generally receives benefits according to their own tier level. Some shared benefits, like lounge access, may depend on airline policy.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "What happens in a two-passenger one-way scenario with FF numbers?",
+    "reference_contexts": [
+      "A paid air order with FF# allows both passengers to receive discounted offers."
+    ],
+    "reference": "In a two-passenger one-way scenario, both passengers with FF numbers receive discounted offers, and EMD and AE are generated accordingly.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "What validation mechanism ensures the accuracy of seat or ancillary offers during modifications?",
+    "reference_contexts": [
+      "OMS should use order version/timestamp validation to ensure consistency."
+    ],
+    "reference": "Order version and timestamp validation in OMS ensures accuracy and consistency during seat or ancillary modifications.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "What should happen when adding seats or ancillaries to an existing order?",
+    "reference_contexts": [
+      "Offers must be prepared for a specific order with a specific FF# and tier level."
+    ],
+    "reference": "When adding seats or ancillaries, offers must be generated specifically for the order and linked to the passenger’s FF# and tier level.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "What happens if seats or ancillaries are chargeable but discounted?",
+    "reference_contexts": [
+      "When seats or ancillaries such as baggage, meals, or seat selections are chargeable but discounted, it means they are optional add-ons offered at a lower price than the standard rate. Airlines provide such discounts to encourage customers to purchase additional services. The discounted price is applied on top of the base fare, allowing passengers to save money while still opting for extra services. These promotions are often part of loyalty benefits or sales campaigns, giving passengers flexibility and value while enabling the airline to increase ancillary revenue."
+    ],
+    "reference": "When seats or ancillaries are chargeable but discounted, they are optional add-ons offered at a lower cost than usual. Airlines provide these discounts to encourage purchases of extra services and boost revenue, while passengers benefit from reduced prices and flexible options.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  }
+]
+

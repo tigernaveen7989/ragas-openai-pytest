@@ -1,4 +1,0 @@
-INFO     pytest_logger:test_flight_booking.py:7 hello
-DEBUG    pytest_logger:test_flight_booking.py:8 debug
-ERROR    pytest_logger:test_flight_booking.py:9 error
-WARNING  pytest_logger:test_flight_booking.py:10 warning

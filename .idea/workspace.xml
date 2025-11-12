@@ -1,23 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8b627e9-b58c-45e4-b4ce-24a071cab7f4" name="Changes" comment="" />
+    <list default="true" id="f8b627e9-b58c-45e4-b4ce-24a071cab7f4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/dataset/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/cancel_booking/cancel_booking_dataset.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/loyalty_tier_offers/loyalty_tier_offers_dataset.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/modify_booking/modify_booking_dataset.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_documents/cancel_booking/cancel order.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generate_datasets/test_generate_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/llm_base/ragas_dataset_generator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/llm_base/ragas_metrics_evaluator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_loyalty_tier_offers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utilities/assertions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utilities/ironman.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature_documents/loyalty-tier-offers/Loyalty Tier Validation.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testreports/allure-results/47a4b203-79f3-479d-a14f-b46067092550-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testreports/allure-results/493b6b44-c6df-4460-bb68-f77657dfc2c6-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testreports/allure-results/4c0d4fc2-ed8b-4339-b943-97c581074ab9-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testreports/allure-results/5e0cf6ee-a314-4e69-9ad7-0e3a72a4ce0c-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testreports/allure-results/b8ef64db-50a7-4cc0-a235-5568948f0a01-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/allure-results/11e14fe8-5c86-4b47-ae7b-f69eafeeb302-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/allure-results/9b5ca046-c5dd-4eb2-a7d9-6db196c5f038-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_flight_booking.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_flight_booking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_loyalty_tier_accounts.py" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/logger.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="34xSkIIM7DZKH44REcgU5tyWj5f" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python tests.Python tests for test_flight_booking.TestFlightBooking.executor": "Run",
+    "Python tests.Python tests for test_flight_booking.TestFlightBooking.test_flight_booking.executor": "Run",
+    "Python tests.Python tests for test_generate_dataset.TestRagasDatasetGenerator.executor": "Run",
+    "Python tests.Python tests for test_generate_dataset.TestRagasDatasetGenerator.test_generate_dynamic_dataset.executor": "Run",
+    "Python tests.Python tests for test_loyalty_tier_offers.TestGenerateRagasDataset.executor": "Run",
+    "Python tests.Python tests for test_loyalty_tier_offers.TestGenerateRagasDataset.test_generate_dataset.executor": "Run",
+    "Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.executor": "Run",
+    "Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_context_precision.executor": "Run",
+    "Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_context_recall.executor": "Run",
+    "Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_faithfulness.executor": "Run",
+    "Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_rubric_score.executor": "Run",
+    "Python tests.Python tests for test_loyalty_tier_offers.TestRagasDatasetGenerator (1).executor": "Run",
+    "Python tests.Python tests for test_loyalty_tier_offers.TestRagasDatasetGenerator.executor": "Run",
+    "Python tests.Python tests for test_loyalty_tier_offers.TestRagasDatasetGenerator.test_generate_dynamic_dataset.executor": "Run",
+    "Python tests.Python tests in test_flight_booking.py.executor": "Run",
+    "Python tests.Python tests in test_loyalty_tier_offers.py.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/SG0704235/PycharmProjects/ragas-openai-pytest/dataset/modify_booking",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\SG0704235\PycharmProjects\ragas-openai-pytest\dataset\modify_booking" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_context_precision">
+    <configuration name="Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="ragas-openai-pytest" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_loyalty_tier_offers.TestLoyaltyTierOffers&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_context_precision" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="ragas-openai-pytest" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_loyalty_tier_offers.TestLoyaltyTierOffers.test_context_precision&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_context_recall" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="ragas-openai-pytest" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_loyalty_tier_offers.TestLoyaltyTierOffers.test_context_recall&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_faithfulness" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="ragas-openai-pytest" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_loyalty_tier_offers.TestLoyaltyTierOffers.test_faithfulness&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_rubric_score" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="ragas-openai-pytest" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_loyalty_tier_offers.TestLoyaltyTierOffers.test_rubric_score&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_context_precision" />
+        <item itemvalue="Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_faithfulness" />
+        <item itemvalue="Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_rubric_score" />
+        <item itemvalue="Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_context_recall" />
+        <item itemvalue="Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -36,5 +193,8 @@
       <updated>1762153871554</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

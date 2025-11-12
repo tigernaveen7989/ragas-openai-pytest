@@ -1,0 +1,164 @@
+[
+  {
+    "user_input": "What is the purpose of the Seat Map & Ancillary Offers feature with Frequent Flyer Tier Benefits?",
+    "reference_contexts": [
+      "Feature ensures that seat map and ancillary offers respect frequent flyer tier level benefits by marking items as free or discounted based on the passenger’s tier."
+    ],
+    "reference": "The purpose is to ensure seat map and ancillary offers reflect frequent flyer tier benefits, making certain items free or discounted according to the passenger's tier level.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "Which systems are involved in handling Frequent Flyer tier information?",
+    "reference_contexts": [
+      "RMX stores the FF# and tier level in the offer. OMS validates the FF# and tier level against OrderCreateRQ and Customer Insight."
+    ],
+    "reference": "The RMX system stores the frequent flyer number and tier level in the offer, while the OMS system validates this data using OrderCreateRQ and Customer Insight.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "How does the OMS ensure consistency when modifying existing orders?",
+    "reference_contexts": [
+      "OMS should use order version/timestamp validation to ensure consistency."
+    ],
+    "reference": "OMS uses order version and timestamp validation to ensure consistency when seats or ancillaries are added to an existing order.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "What happens when a seat or ancillary is free for a passenger?",
+    "reference_contexts": [
+      "If seats/ancillaries are free (0.00), only AE is generated with HK1/CONFIRMED status."
+    ],
+    "reference": "When a seat or ancillary is free, only an AE is generated with HK1/CONFIRMED status, and no EMD is issued.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "What is the expected behavior for non-chargeable items?",
+    "reference_contexts": [
+      "If non-chargeable, no EMD or AE is issued."
+    ],
+    "reference": "For non-chargeable items, neither EMD nor AE is generated in the PNR.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "What does the RMX system do in this feature?",
+    "reference_contexts": [
+      "The RMX system must store the frequent flyer number (FF#) and tier level in the offer."
+    ],
+    "reference": "The RMX system stores the frequent flyer number and tier level in the offer during seat map or ancillary processing.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "What validation is performed by the OMS system?",
+    "reference_contexts": [
+      "The OMS system must validate the FF# and tier level against the data provided in the OrderCreateRQ and the tier level retrieved from Customer Insight."
+    ],
+    "reference": "The OMS system validates the frequent flyer number and tier level using data from OrderCreateRQ and Customer Insight.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "In a round trip for a single passenger with an FF#, what should the system do?",
+    "reference_contexts": [
+      "A paid air order with an FF# allows the user to add seats and ancillaries at a discounted price based on the passenger’s tier."
+    ],
+    "reference": "For a single passenger round trip with an FF#, the system should allow adding seats and ancillaries at discounted prices according to the passenger’s tier.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "What artifacts must be generated in the PNR after adding ancillaries?",
+    "reference_contexts": [
+      "An EMD should be issued in both the API and PNR. An AE should be generated in the PNR for the round trip."
+    ],
+    "reference": "After adding ancillaries, both an EMD and an AE should be generated in the PNR for a round trip scenario.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "How are tier benefits applied when two passengers have different frequent flyer tiers?",
+    "reference_contexts": [
+      "An order with two passengers having different FF tiers should apply the lower tier band for discounts."
+    ],
+    "reference": "When two passengers have different tier levels, the system applies the lower tier level to determine discounts on seats and ancillaries.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "What happens in a two-passenger one-way scenario with FF numbers?",
+    "reference_contexts": [
+      "A paid air order with FF# allows both passengers to receive discounted offers."
+    ],
+    "reference": "In a two-passenger one-way scenario, both passengers with FF numbers receive discounted offers, and EMD and AE are generated accordingly.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "What types of pricing scenarios should be tested?",
+    "reference_contexts": [
+      "Include price variants: Discounted items (> 0.00), Free items (0.00), Non-chargeable items (no EMD/AE expected)."
+    ],
+    "reference": "Testing should include discounted items with prices above zero, free items with a price of zero, and non-chargeable items where no EMD or AE is generated.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "What is the significance of Customer Insight in this process?",
+    "reference_contexts": [
+      "OMS validates the tier level retrieved from Customer Insight."
+    ],
+    "reference": "Customer Insight provides the verified tier level used by OMS to validate frequent flyer information in the order.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "What validation mechanism ensures the accuracy of seat or ancillary offers during modifications?",
+    "reference_contexts": [
+      "OMS should use order version/timestamp validation to ensure consistency."
+    ],
+    "reference": "Order version and timestamp validation in OMS ensures accuracy and consistency during seat or ancillary modifications.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "What should happen when adding seats or ancillaries to an existing order?",
+    "reference_contexts": [
+      "Offers must be prepared for a specific order with a specific FF# and tier level."
+    ],
+    "reference": "When adding seats or ancillaries, offers must be generated specifically for the order and linked to the passenger’s FF# and tier level.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "What does an AE represent in the PNR?",
+    "reference_contexts": [
+      "An AE should be generated in the PNR for the round trip. If seats/ancillaries are free, only AE is generated with HK1/CONFIRMED status."
+    ],
+    "reference": "An AE in the PNR represents the confirmed status of a seat or ancillary service, especially when it’s free and no EMD is required.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "Which tier level determines discounts in mixed tier passenger scenarios?",
+    "reference_contexts": [
+      "An order with two passengers having different FF tiers should apply the lower tier band for discounts."
+    ],
+    "reference": "In mixed tier passenger cases, the system uses the lower tier band to determine discount eligibility.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "What happens if seats or ancillaries are chargeable but discounted?",
+    "reference_contexts": [
+      "A paid air order with an FF# allows the user to add seats and ancillaries at a discounted price based on the passenger’s tier."
+    ],
+    "reference": "If seats or ancillaries are chargeable but discounted, the passenger pays a reduced price according to their frequent flyer tier level, and both EMD and AE are generated.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "Which scenarios are included in the acceptance criteria?",
+    "reference_contexts": [
+      "Scenario 1: Single Passenger – Round Trip",
+      "Scenario 2: Two Passengers – One Way",
+      "Scenario 3: Mixed Tier Passengers – Single Pax RT"
+    ],
+    "reference": "Acceptance criteria cover single passenger round trip, two passengers one-way, and mixed tier passenger round trip scenarios.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  },
+  {
+    "user_input": "What overall functionality does this feature guarantee?",
+    "reference_contexts": [
+      "This feature ensures that frequent flyer tier benefits are respected during seat and ancillary offer generation. It supports both initial and post-booking scenarios."
+    ],
+    "reference": "The feature guarantees that frequent flyer tier benefits are correctly applied to seat and ancillary offers across both initial and post-booking scenarios, ensuring correct pricing and artifact generation.",
+    "synthesizer_name": "single_hop_specific_query_synthesizer"
+  }
+]
