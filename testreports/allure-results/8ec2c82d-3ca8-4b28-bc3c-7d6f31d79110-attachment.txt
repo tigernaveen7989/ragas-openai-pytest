@@ -1,0 +1,5 @@
+INFO     pytest_logger:ragas_dataset_generator.py:41 📁 Feature Directory: C:\Users\SG0704235\PycharmProjects\ragas-openai-pytest\feature_documents\cancel_booking
+INFO     pytest_logger:ragas_dataset_generator.py:42 💾 Output Directory: C:\Users\SG0704235\PycharmProjects\ragas-openai-pytest\dataset\cancel_booking
+INFO     pytest_logger:ragas_dataset_generator.py:43 📊 Dataset Name: ragas_eval_cancel_booking
+INFO     pytest_logger:ragas_dataset_generator.py:51 🚀 Generating single-turn dataset for feature: cancel_booking
+INFO     pytest_logger:ragas_dataset_generator.py:75 💾 Dataset saved at: C:\Users\SG0704235\PycharmProjects\ragas-openai-pytest\dataset\cancel_booking\cancel_booking_dataset.json

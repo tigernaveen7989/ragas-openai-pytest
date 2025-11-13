@@ -1,0 +1,3 @@
+INFO     pytest_logger:conftest.py:76 Preparing data sample for singleturn RAGAS evaluation...
+INFO     pytest_logger:ironman.py:61 ---------------- API RESPONSE -------------------
+INFO     pytest_logger:ironman.py:62 {'error': 'Internal server error', 'status': 'error'}

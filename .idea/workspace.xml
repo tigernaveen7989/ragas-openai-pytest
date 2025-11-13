@@ -5,8 +5,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8b627e9-b58c-45e4-b4ce-24a071cab7f4" name="Changes" comment="initial commit">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/flight_booking/flight_booking_dataset.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/01592948-5175-4078-a18a-1ca70150c5be-attachment.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/01d147e0-1d8e-46b6-b8cc-538ebb93d091-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/04c550b1-7b93-448b-a6af-13dc6461ff53-attachment.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/1841ae1b-14ad-4202-8ff0-170b5fd82e75-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/25b5bbad-c2b0-4935-97af-e43dfc3e7002-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/2fc821fd-65f6-41ab-abf3-1a12f520afeb-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/3553628a-5899-4a91-bf84-d0ec7b205f17-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/3606c995-a9be-48e8-9baa-8e9dd10052ef-attachment.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/371208b9-0b0c-4080-8126-f3ff710d1b2b-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/3f3a8a8c-9ee1-4e2c-95e1-8c5ac1c238c0-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/3f461f1c-be04-4aff-bbd4-d477c3ff1001-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/4817e0b9-a53b-4caf-a17d-8c6b53b3b5c3-attachment.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/4c4940d0-f9d6-413a-b880-cdb1d56e4e4d-attachment.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/5329d7e3-caff-4f01-ac37-8dae9340f5bf-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/5bb1b60a-3408-4db6-990d-bcc35cfa6cc7-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/5e46548b-8def-4559-b7b4-fa61a7029d9a-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/5e675056-156d-464a-99e9-7e919e425fc2-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/6549bb70-ed2c-4b93-b474-f457fb05e0e5-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/659e50ab-fad0-49a6-9ed3-35cb2326c44e-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/670ae155-19bb-40d1-bed5-693ad6cb8b23-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/69be2f57-65ee-4d42-9f1b-10b065c87508-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/70b31a55-bddb-4b87-8330-f9ed4697e2a5-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/78e8f7e9-9bd2-442f-b395-51295beab745-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/7b6b5ec9-6354-422c-8f85-dbd7ec65af01-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/8f96ddb0-ed1d-4af4-ad70-43f47f4c36f6-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/98564c15-a47e-4197-a324-ac01a6f8bf42-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/988484a7-d46b-4f76-849f-8b4ef8964c68-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/9ea693a3-a7e5-432a-91e0-860f71a800dd-attachment.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/a35337b8-fc23-402f-975c-10a5ebb023c5-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/b2e93814-d5ed-4d78-ab47-8b93659ee656-attachment.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/b67b5511-91a0-4eef-aa4a-6c78881e0743-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/bb285403-1a1d-40a1-9589-48b53e815379-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/bd15d766-322b-42b7-b60f-03a44be714ff-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/bdc27247-98ed-4752-8bcf-2d7e042d843c-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/c246eb42-f194-4ebb-82b6-ff09092d2c6a-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/c8d0e05f-7d73-44dc-80bf-05fd4d8aaa0c-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/d2aed80b-0756-41da-9e5b-5071a4eef051-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/da219ca7-f4ba-49bc-834a-17b2c7728142-attachment.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/db197691-d30e-4075-9e7f-8b72e28f2da0-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/e16fc935-2879-4b43-8107-772ffea11fcd-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/e8f9b622-3279-4bdd-adce-497ef5eb1b81-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/eada05f8-a710-4162-a70c-b721c053daf4-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testreports/allure-results/f9617829-f0ed-4ea5-81b8-77965467602a-attachment.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generate_datasets/test_generate_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/generate_datasets/test_generate_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/llm_base/ragas_dataset_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/llm_base/ragas_dataset_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_flight_booking.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_flight_booking.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +87,7 @@
     "Python tests.Python tests for test_flight_booking.TestFlightBooking.test_flight_booking.executor": "Run",
     "Python tests.Python tests for test_generate_dataset.TestRagasDatasetGenerator.executor": "Run",
     "Python tests.Python tests for test_generate_dataset.TestRagasDatasetGenerator.test_generate_dynamic_dataset.executor": "Run",
+    "Python tests.Python tests for test_generate_dataset.TestRagasDatasetGenerator.test_generate_multiturn_dataset.executor": "Run",
     "Python tests.Python tests for test_loyalty_tier_offers.TestGenerateRagasDataset.executor": "Run",
     "Python tests.Python tests for test_loyalty_tier_offers.TestGenerateRagasDataset.test_generate_dataset.executor": "Run",
     "Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.executor": "Run",
@@ -54,28 +101,44 @@
     "Python tests.Python tests in test_flight_booking.py.executor": "Run",
     "Python tests.Python tests in test_loyalty_tier_offers.py.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/SG0704235/PycharmProjects/ragas-openai-pytest/dataset/modify_booking",
+    "last_opened_file_path": "C:/Users/SG0704235/PycharmProjects/ragas-openai-pytest/dataset/flight_booking",
     "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\SG0704235\PycharmProjects\ragas-openai-pytest\dataset\flight_booking" />
       <recent name="C:\Users\SG0704235\PycharmProjects\ragas-openai-pytest\dataset\modify_booking" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_context_precision">
-    <configuration name="Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for test_generate_dataset.TestRagasDatasetGenerator.test_generate_multiturn_dataset">
+    <configuration name="Python tests for test_generate_dataset.TestRagasDatasetGenerator.test_generate_dynamic_dataset" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="ragas-openai-pytest" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/generate_datasets" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_loyalty_tier_offers.TestLoyaltyTierOffers&quot;" />
+      <option name="_new_target" value="&quot;test_generate_dataset.TestRagasDatasetGenerator.test_generate_dynamic_dataset&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_generate_dataset.TestRagasDatasetGenerator.test_generate_multiturn_dataset" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="ragas-openai-pytest" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/generate_datasets" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_generate_dataset.TestRagasDatasetGenerator.test_generate_multiturn_dataset&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -91,21 +154,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_loyalty_tier_offers.TestLoyaltyTierOffers.test_context_precision&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_context_recall" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="ragas-openai-pytest" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_loyalty_tier_offers.TestLoyaltyTierOffers.test_context_recall&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -141,11 +189,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_generate_dataset.TestRagasDatasetGenerator.test_generate_multiturn_dataset" />
+        <item itemvalue="Python tests.Python tests for test_generate_dataset.TestRagasDatasetGenerator.test_generate_dynamic_dataset" />
         <item itemvalue="Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_context_precision" />
         <item itemvalue="Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_faithfulness" />
         <item itemvalue="Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_rubric_score" />
-        <item itemvalue="Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_context_recall" />
-        <item itemvalue="Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers" />
       </list>
     </recent_temporary>
   </component>
@@ -175,6 +223,17 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
