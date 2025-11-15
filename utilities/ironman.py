@@ -131,7 +131,7 @@ class IronMan:
                 )
                 pytest.skip("❌ Skipping test due to API internal server error.")
             else:
-                response_text = response_dictionary.get("response", "⚠️ No 'response' key found in dictionary")
+                response_text = response_dictionary.get("answer", "⚠️ No 'answer' key found in dictionary")
                 allure.attach(
                     str(response_text),
                     name="API Response",
