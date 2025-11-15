@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from ragas import SingleTurnSample, MultiTurnSample
 from ragas.llms import LangchainLLMWrapper
+from ragas.messages import HumanMessage, AIMessage
 
 from utilities.ironman import IronMan
 from utilities.logger import LoggerFactory
@@ -99,14 +100,35 @@ def get_multiturn_data(request, logger):
     logger.info("Preparing data sample for MultiTurn RAGAS evaluation...")
 
     ironman = IronMan(logger)
-    response_dictionary = ironman.get_api_response(test_data)
+    # Default: returns LangChain conversation messages
+    question_chathistory = ironman.get_multiturn_conversation_data(test_data,as_object=True)
+    conversation, reference, reference_contexts, synthesizer_name = ironman.get_multiturn_conversation_data(test_data, as_object=False)
+
+    logger.info(question_chathistory)
+    logger.info(conversation)
+    logger.info(reference)
+    logger.info(reference_contexts)
+    logger.info(synthesizer_name)
+
+    response_dictionary = ironman.get_rahul_shetty_llm_api_response(question_chathistory)
 
     # Create multi-turn sample
+    user_inputs = []
+    for msg in conversation:
+        if msg.type == "human":
+            user_inputs.append(msg)  # keep HumanMessage
+        elif msg.type == "ai":
+            user_inputs.append(msg)  # keep AIMessage
+
+    # ---------------------------------------------------------------
+    # Build MultiTurnSample
+    # ---------------------------------------------------------------
     sample = MultiTurnSample(
-        user_inputs=test_data["user_inputs"],               # list of queries
-        retrieved_contexts=response_dictionary["responses"], # list of contexts
-        response="\n".join(test_data["reference_contexts"]), # list of model responses
-        references=test_data["references"]                  # list of reference answers
+        user_input=user_inputs,
+        retrieved_contexts=[doc["page_content"] for doc in response_dictionary.get("retrieved_docs", [])],
+        response=[response_dictionary.get("answer", "")],
+        references=test_data.get("reference", "")
     )
-    return sample
+    response = [response_dictionary.get("answer", "")]
+    return sample, response
 

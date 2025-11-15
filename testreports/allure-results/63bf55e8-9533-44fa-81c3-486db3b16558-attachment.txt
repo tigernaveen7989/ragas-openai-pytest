@@ -1,3 +1,0 @@
-INFO     pytest_logger:conftest.py:76 Preparing data sample for singleturn RAGAS evaluation...
-INFO     pytest_logger:ironman.py:61 ---------------- API RESPONSE -------------------
-INFO     pytest_logger:ironman.py:62 {'status': 'error', 'error': 'Rate limit exceeded. Please wait 5 seconds before making another request.', 'retry_after': 5}

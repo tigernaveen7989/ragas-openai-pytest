@@ -1,8 +1,0 @@
-The Seat Map & Ancillary Offers feature with Frequent Flyer Tier Benefits is meant to make booking easier and more rewarding by:
-
-- Showing a real-time interactive seat map with available seats.
-- Highlighting seats that maximize your tier benefits (preferred seats, upgrade opportunities, etc.).
-- Surfacing ancillary offers that your tier is eligible for (extra baggage, priority check-in, lounge access, meals, seat upgrades, bundles) and applying any tier-based discounts or freebies.
-- Personalizing options based on your current frequent flyer status, preferences, and fare rules.
-
-In short, it helps you quickly choose seats and add-ons that are most valuable to your tier, improving both your experience and loyalty value for the airline.

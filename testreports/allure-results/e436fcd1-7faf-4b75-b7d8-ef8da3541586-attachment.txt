@@ -1,8 +1,0 @@
-INFO     pytest_logger:ragas_dataset_generator.py:41 📁 Feature Directory: C:\Users\SG0704235\PycharmProjects\ragas-openai-pytest\feature_documents\cancel_booking
-INFO     pytest_logger:ragas_dataset_generator.py:42 💾 Output Directory: C:\Users\SG0704235\PycharmProjects\ragas-openai-pytest\dataset\cancel_booking
-INFO     pytest_logger:ragas_dataset_generator.py:43 📊 Dataset Name: ragas_eval_cancel_booking
-INFO     pytest_logger:ragas_dataset_generator.py:89 🚀 Generating multi-turn dataset for feature: cancel_booking
-INFO     pytest_logger:ragas_dataset_generator.py:150 💾 Multi-turn dataset saved at: C:\Users\SG0704235\PycharmProjects\ragas-openai-pytest\dataset\cancel_booking\multiturn_dataset.json
-INFO     pytest_logger:ragas_dataset_generator.py:173 🆕 Created new dataset: ragas_eval_cancel_booking
-INFO     pytest_logger:ragas_dataset_generator.py:183 ✅ Uploaded dataset 'ragas_eval_cancel_booking' to LangSmith
-INFO     pytest_logger:test_generate_dataset.py:32 ✅ Dataset generated and uploaded successfully: C:\Users\SG0704235\PycharmProjects\ragas-openai-pytest\dataset\cancel_booking\multiturn_dataset.json

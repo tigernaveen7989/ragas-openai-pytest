@@ -1,1 +1,0 @@
-When adding seats or ancillaries, offers must be generated specifically for the order and linked to the passenger’s FF# and tier level.

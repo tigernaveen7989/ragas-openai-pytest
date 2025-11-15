@@ -1,8 +1,0 @@
-[32m[INFO][0m [35m[10-11-2025 14:38:39][0m [36mconftest.py:76[0m : [30mPreparing data sample for singleturn RAGAS evaluation...[0m
-----------------------------------------------------------------------------------------------------
-[32m[INFO][0m [35m[10-11-2025 14:38:49][0m [36mironman.py:61[0m : [30m---------------- API RESPONSE -------------------[0m
-----------------------------------------------------------------------------------------------------
-[32m[INFO][0m [35m[10-11-2025 14:38:49][0m [36mironman.py:62[0m : [30m{'response': 'A real-time pricing and inventory validation mechanism (a rules-based pricing/fulfillment engine). It recalculates and validates seat availability, fare rules, taxes/fees, and ancillary pricing for the modified itinerary before presenting offers, ensuring only valid, accurate options are shown.', 'status': 'success'}[0m
-----------------------------------------------------------------------------------------------------
-[32m[INFO][0m [35m[10-11-2025 14:38:55][0m [36mtest_loyalty_tier_offers.py:118[0m : [30mRubric Score: 3[0m
-----------------------------------------------------------------------------------------------------

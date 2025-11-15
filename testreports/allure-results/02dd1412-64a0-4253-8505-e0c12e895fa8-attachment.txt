@@ -1,8 +1,0 @@
-[32m[INFO][0m [35m[10-11-2025 14:38:18][0m [36mconftest.py:76[0m : [30mPreparing data sample for singleturn RAGAS evaluation...[0m
-----------------------------------------------------------------------------------------------------
-[32m[INFO][0m [35m[10-11-2025 14:38:30][0m [36mironman.py:61[0m : [30m---------------- API RESPONSE -------------------[0m
-----------------------------------------------------------------------------------------------------
-[32m[INFO][0m [35m[10-11-2025 14:38:30][0m [36mironman.py:62[0m : [30m{'response': "In a two-passenger, one-way scenario with FF (Frequent Flyer) numbers, here's what typically happens:\n\n*   **Mileage accrual:** Both passengers, if they have FF numbers linked to their tickets, will earn miles for the flight. The exact amount depends on the airline, fare class, and distance flown.\n*   **Benefits:** Passengers may receive benefits based on their FF status, such as priority boarding, lounge access, or extra baggage allowance.\n*   **Record keeping:** The flight details and mileage earned will be recorded in each passenger's FF account.\n*   **Redemption:** The earned miles can be used later for award flights, upgrades, or other rewards offered by the airline.", 'status': 'success'}[0m
-----------------------------------------------------------------------------------------------------
-[32m[INFO][0m [35m[10-11-2025 14:38:39][0m [36mtest_loyalty_tier_offers.py:118[0m : [30mRubric Score: 2[0m
-----------------------------------------------------------------------------------------------------

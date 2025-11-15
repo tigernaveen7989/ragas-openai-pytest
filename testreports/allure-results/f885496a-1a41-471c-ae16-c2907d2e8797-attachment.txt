@@ -1,1 +1,0 @@
-What validation mechanism ensures the accuracy of seat or ancillary offers during modifications?

@@ -1,1 +1,0 @@
-Order version and timestamp validation in OMS ensures accuracy and consistency during seat or ancillary modifications.

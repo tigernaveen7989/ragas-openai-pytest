@@ -1,1 +1,0 @@
-A paid air order with an FF# allows the user to add seats and ancillaries at a discounted price based on the passenger’s tier.

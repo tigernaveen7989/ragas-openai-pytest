@@ -1,0 +1,1 @@
+['Playwright is used for end‑to‑end testing of web applications. It automates browser interactions across Chromium, Firefox, and WebKit, allowing developers to write reliable, fast tests for both UI and API scenarios. It’s commonly used to validate complex e‑commerce flows, UI component behavior, and API responses in CI/CD pipelines.']
