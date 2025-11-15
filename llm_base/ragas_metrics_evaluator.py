@@ -10,6 +10,7 @@ from ragas.dataset_schema import EvaluationDataset
 from ragas.messages import HumanMessage
 from ragas import evaluate
 from langchain_core.messages import HumanMessage, SystemMessage
+from ragas.dataset_schema import SingleTurnSample, MultiTurnSample
 
 
 class MetricsEvaluator:
@@ -159,37 +160,43 @@ class MetricsEvaluator:
     async def get_rubric_score(self, sample):
         """
         Compute the Rubric Score for a given test sample.
+        Works for both Single-turn and Multi-turn conversations.
         """
         with allure.step("Calculate Rubric Score"):
-            # Attach all relevant test inputs for traceability
+            # Attach details for traceability
             allure.attach(str(sample.user_input), "User Input", allure.attachment_type.TEXT)
-            allure.attach(
-                json.dumps(sample.retrieved_contexts, indent=2, ensure_ascii=False),
-                "Retrieved Contexts",
-                allure.attachment_type.TEXT
-            )
-            allure.attach(str(sample.response), "Model Response", allure.attachment_type.TEXT)
-            allure.attach(str(sample.reference), "Reference Answer", allure.attachment_type.TEXT)
+            if hasattr(sample, "retrieved_contexts"):
+                allure.attach(json.dumps(sample.retrieved_contexts, indent=2), "Retrieved Contexts",
+                              allure.attachment_type.TEXT)
+            if hasattr(sample, "response"):
+                allure.attach(str(sample.response), "Model Response", allure.attachment_type.TEXT)
+            if hasattr(sample, "reference"):
+                allure.attach(str(sample.reference), "Reference Answer", allure.attachment_type.TEXT)
 
-            # Define rubric scale and qualitative meaning
+            # Define rubric scale
             rubrics = {
-                "score1_description": "The response is incorrect, irrelevant, or does not align with the ground truth.",
-                "score2_description": "The response partially matches the ground truth but includes significant errors or omissions.",
-                "score3_description": "The response generally aligns with the ground truth but lacks detail or clarity.",
-                "score4_description": "The response is mostly accurate and well-aligned, with only minor issues.",
-                "score5_description": "The response is fully accurate, clear, complete, and matches the ground truth perfectly.",
+                "score1_description": "Response/conversation is incorrect or irrelevant.",
+                "score2_description": "Partially correct but misses key details or context.",
+                "score3_description": "Generally correct but lacks clarity or completeness.",
+                "score4_description": "Mostly accurate and context-aware with minor issues.",
+                "score5_description": "Fully accurate, clear, complete, and context-aware."
             }
 
-            allure.attach(
-                json.dumps(rubrics, indent=2, ensure_ascii=False),
-                name="Rubric Definitions",
-                attachment_type=allure.attachment_type.JSON)
+            allure.attach(json.dumps(rubrics, indent=2), name="Rubric Definitions",
+                          attachment_type=allure.attachment_type.JSON)
 
-            # Initialize and compute the metric
-            self.metric = RubricsScore(rubrics=rubrics, llm=self.get_llm_wrapper)
-            score = await self.metric.single_turn_ascore(sample)
+            # Initialize RubricsScore metric
+            metric = RubricsScore(rubrics=rubrics, llm=self.get_llm_wrapper)
 
-            # Attach the score for reporting
+            # Detect sample type and compute score
+            if isinstance(sample, SingleTurnSample):
+                score = await metric.single_turn_ascore(sample)
+            elif isinstance(sample, MultiTurnSample):
+                score = await metric.multi_turn_ascore(sample)
+            else:
+                raise TypeError(f"Unsupported sample type: {type(sample).__name__}")
+
+            # Attach score for reporting
             allure.attach(str(score), "Rubric Score", allure.attachment_type.TEXT)
 
         with allure.step(f"Rubric Score: {score}"):

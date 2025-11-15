@@ -186,5 +186,38 @@
     ],
     "reference": "Jenkins is a CI/CD automation server that manages code build, test, and deployment workflows. It integrates with automation tools like Playwright, Selenium, and JMeter, supports headless testing, and enables parallel execution for faster pipelines.",
     "synthesizer_name": "multi_turn_ci_cd_jenkins"
+  },
+  {
+    "conversation": [
+      {
+        "role": "human",
+        "content": "What is SabreMosaic and how does it help with canceling air exchanged items?"
+      },
+      {
+        "role": "ai",
+        "content": "SabreMosaic is a capability that enables users to cancel air exchanged items and corresponding ancillaries like seats, bags, and other EMD-A items. Previously, the cancel operation was limited to the initial air order and corresponding EMD-As, but now it allows for the cancellation of the most recent air exchanged order item and EMS-A items with OUT_OF_SYNC status, which are not automatically canceled by PSS."
+      },
+      {
+        "role": "human",
+        "content": "Follow-up Q2: **User Question #2:** Can I cancel my booking if it's within 24 hours of the scheduled time?\n\n**AI Response:** It depends on the cancellation policy of the service you booked. Many services allow cancellations up to a certain time before the scheduled time, but some may have stricter rules. Please check the specific terms for your booking or provide me with the details, and I can help you further!"
+      },
+      {
+        "role": "ai",
+        "content": "AI Response 2: **User Question #2:** Can I cancel my booking if it's within 24 hours of the scheduled time?\n\n**AI Response:** It depends on the cancellation policy of the service you booked. Many services allow cancellations up to a certain time before the scheduled time, but some may have stricter rules. Please check the specific terms for your booking or provide me with the details, and I can help you further!"
+      },
+      {
+        "role": "human",
+        "content": "Follow-up Q3: **User Question #3:** Can I cancel my booking if it's within the 24-hour window before my reservation?\n\n**AI Response:** It depends on the cancellation policy of the service you booked. Many places allow cancellations within 24 hours, but some may charge a fee or not allow it at all. Please check the specific terms for your booking or contact customer support for assistance."
+      },
+      {
+        "role": "ai",
+        "content": "AI Response 3: **User Question #3:** Can I cancel my booking if it's within the 24-hour window before my reservation?\n\n**AI Response:** It depends on the cancellation policy of the service you booked. Many places allow cancellations within 24 hours, but some may charge a fee or not allow it at all. Please check the specific terms for your booking or contact customer support for assistance."
+      }
+    ],
+    "reference_contexts": [
+      "High-level Business Need / Market Problems\n\nWhat is the customer's high-level business need or market problem? (What are the drivers? Who exactly (persona) is affected by the problem? What is customer’s problem? Why is this a problem? How often do they face the problem? How much does the problem cost to customer? How does customer solve the problem today? Consequences of not solving the problem? What data supports/invalidates our assumptions and beliefs about problem?​) \n\nThis capability will enable user to cancel air exchanged item and also corresponding ancillaries like: seat, bags and all other EMD-A items. Previously SabreMosaic cancel operation was limited to cancel initial air order and corresponding EMD-As, but now regardless of number of exchanges we will be able to cancel recent air exchanged order_item and also EMS-A items with OUT_OF_SYNC status, that are not automatically canceled by PSS.\n\nWhen an OrderItem is exchanged, and then ultimately refunded, the applicable refundability rules from the Original itinerary apply.\n\nIf the  refundability of the exchange is more restrictive (higher penalty, rules) , the rules that apply to the exchange apply in the case of a cancelation\n\n Objectives for a Successful Solution \n\nWhat objectives does the customer need to accomplish? (What is the customer’s goal(s)?)\n\nThe most restrictive of the refundability rules apply when a changed order item/order is subsequently canceled\n\n Business Value  \n\nWhat is the measurable benefit delivered? (What is the value of what we’re doing? What benefits user gets while using solution? How customer describes value? What is the value for customer? How the solution address the problem?​ Why do we decided to solve the problem?​ What is unique about our value proposition? How does it differentiate from existing solutions? Does this uniqueness matter to customers?)\n\nWill protect the airline from leakage by rule bypassing\n\n What Success Looks Like\n\nWhat conditions must be met?  (What are the verifiable results? How do you define success of this capability?​ How to measure success?​ How customer measure success?​ How will it impact customer?​ What quantitative metrics can be used to measure value proposition?​)   \n\nThe most restrictive of the refundability rules apply when a changed order item/order is subsequently canceled\n\n\n\nUseful links:\n\n1. Capability Document: Wolverine Technology :: sabresonic/FEA97211 - Order Change - Cancel after exchange\n\n2. Mural for FEA97211\n\n3. SabreMosaic [Wolverine] - Capability Tracking (2023-2025) | [WS2] FEA97211 Cancel after exchange | Microsoft Teams\n\n"
+    ],
+    "reference": "SabreMosaic is a capability that enables users to cancel air exchanged items and corresponding ancillaries like seats, bags, and other EMD-A items. Previously, the cancel operation was limited to the initial air order and corresponding EMD-As, but now it allows for the cancellation of the most recent air exchanged order item and EMS-A items with OUT_OF_SYNC status, which are not automatically canceled by PSS.",
+    "synthesizer_name": "multi_turn_conversation_generator"
   }
 ]

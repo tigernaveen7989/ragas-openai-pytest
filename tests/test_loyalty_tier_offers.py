@@ -101,10 +101,10 @@ class TestLoyaltyTierOffers:
         self.assertions.assert_factual_correctness(score)
     # -------------------------------------------------------------------------
 
-    @allure.story("Rubrics Evaluation")
+    @allure.story("Rubric Evaluation")
     @allure.severity(allure.severity_level.CRITICAL)
     @allure.description(
-        "Validates that the model response meets predefined quality rubrics such as accuracy, completeness, and coherence."
+        "Validates that the model response meets predefined quality rubric such as accuracy, completeness, and coherence."
     )
     @pytest.mark.asyncio
     @pytest.mark.parametrize(

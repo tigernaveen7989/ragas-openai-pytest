@@ -119,7 +119,7 @@ class IronMan:
         ).json()
 
         # Log the API interaction
-        self.logger.info("---------------- API RESPONSE -------------------")
+        self.logger.info("------------------ API RESPONSE ---------------------")
         self.logger.info(response_dictionary)
 
         with allure.step("Send user input to API and capture response"):

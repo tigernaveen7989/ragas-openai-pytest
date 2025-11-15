@@ -45,3 +45,19 @@ class TestRestAssured:
         logger.info(f"Top Adherence Score: {score}")
         self.assertions.assert_top_adherence(score=score, threshold=0.8)
     # -------------------------------------------------------------------------
+
+    @allure.story("Rubric Evaluation")
+    @allure.description(
+        "Validates that the model response remains rubric to the reference context for rest assured")
+    @pytest.mark.asyncio
+    @pytest.mark.parametrize("get_multiturn_data", IronMan.load_test_data(feature_name, "multiturn"), indirect=True)
+    async def test_rubric_score(self, get_llm_wrapper, get_multiturn_data, logger):
+        """
+        Test to validate Rubric Score using reusable helper class.
+        """
+        sample, response = get_multiturn_data
+        evaluator = MetricsEvaluator(get_llm_wrapper)
+        score = await evaluator.get_rubric_score(sample)
+        logger.info(f"Rubric Score: {score}")
+
+        self.assertions.assert_rubric(score)
