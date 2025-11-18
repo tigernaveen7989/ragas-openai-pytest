@@ -4,7 +4,8 @@ from utilities.logger import LoggerFactory
 
 
 class Assertions:
-    logger = LoggerFactory.get_logger("pytest_logger")
+    def __init__(self, logger):
+        self.logger = logger
 
     def assert_context_precision(self, score: float, threshold: float = 0.7):
         """
@@ -131,4 +132,18 @@ class Assertions:
             with allure.step(f"Expected Threshold: {threshold}"):
                 pass
             with allure.step(f"✅ Top Adherence Validation Passed ({score})"):
+                pass
+
+    def assert_conversational_memory(self, score: float, threshold: float = 0.8):
+        """
+        Validate that the Conversational Memory score meets the minimum threshold.
+        """
+        self.logger.info(f"Expected Threshold: {threshold}, Score: {score}")
+        with allure.step(f"Validate Conversational Memory Score ≥ {threshold}"):
+            assert score >= threshold, f"❌ Conversational Memory too low: {score}. Expected > {threshold}"
+            with allure.step(f"Conversational Memory Score: {score}"):
+                pass
+            with allure.step(f"Expected Threshold: {threshold}"):
+                pass
+            with allure.step(f"✅ Conversational Memory Validation Passed ({score})"):
                 pass

@@ -205,138 +205,6 @@ class MetricsEvaluator:
         return score
 
     # ----------------------------------------------------------------------
-    async def get_multiturn_faithfulness_score(self, sample):
-        """
-        Compute multi-turn faithfulness by computing per-turn faithfulness
-        using single_turn_ascore(), since RAGAS has no multi-turn API for this metric.
-        """
-
-        with allure.step("Calculate Multi-Turn Faithfulness Score"):
-
-            # Attach full conversation
-            conversation_serialized = [
-                {"role": msg.type, "content": msg.content}
-                for msg in sample.user_input
-            ]
-            allure.attach(
-                json.dumps(conversation_serialized, indent=2, ensure_ascii=False),
-                name="Conversation (User Input: Multi-Turn)",
-                attachment_type=allure.attachment_type.TEXT
-            )
-
-            # Track per-turn scores
-            turn_scores = []
-
-            # Extract messages in pairs (human → ai)
-            messages = sample.user_input
-
-            # retrieved_contexts is a list per turn
-            contexts = getattr(sample, "retrieved_contexts", [])
-
-            # Instantiate single-turn faithfulness
-            metric = Faithfulness(llm=self.get_llm_wrapper)
-
-            turn_index = 0
-
-            for i in range(0, len(messages), 2):
-
-                if i + 1 >= len(messages):
-                    break  # uneven turns, skip
-
-                user_msg = messages[i]
-                ai_msg = messages[i + 1]
-
-                # Build a temporary single-turn sample
-                single_turn_sample = type("SingleTurnSample", (), {})()
-
-                single_turn_sample.user_input = user_msg.content
-                single_turn_sample.response = ai_msg.content
-
-                # Map context (if available)
-                if turn_index < len(contexts):
-                    single_turn_sample.retrieved_contexts = contexts[turn_index]
-                else:
-                    single_turn_sample.retrieved_contexts = []
-
-                # Compute single-turn faithfulness
-                score = await metric.single_turn_ascore(single_turn_sample)
-                turn_scores.append(score)
-
-                turn_index += 1
-
-            # Final score = average of all turn scores
-            final_score = sum(turn_scores) / len(turn_scores) if turn_scores else 0.0
-
-            allure.attach(
-                json.dumps(turn_scores, indent=2),
-                name="Per-Turn Faithfulness Scores",
-                attachment_type=allure.attachment_type.TEXT,
-            )
-
-            allure.attach(
-                str(final_score),
-                name="Multi-Turn Faithfulness Score",
-                attachment_type=allure.attachment_type.TEXT,
-            )
-
-        with allure.step(f"Multi-Turn Faithfulness Score: {final_score}"):
-            pass
-
-        return final_score
-
-    # ----------------------------------------------------------------------
-    async def get_multiturn_answer_relevance_score(self, sample):
-        """
-        Compute the Answer Relevance score for a multi-turn test sample
-        and log inputs in Allure.
-        """
-
-        with allure.step("Calculate Multi-Turn Answer Relevance Score"):
-
-            # Attach user_input (multi-turn conversation)
-            try:
-                conversation_serialized = [
-                    {"role": msg.type, "content": msg.content}
-                    for msg in sample.user_input
-                ]
-
-                allure.attach(
-                    json.dumps(conversation_serialized, indent=2, ensure_ascii=False),
-                    name="Conversation (User Input: Multi-Turn)",
-                    attachment_type=allure.attachment_type.TEXT
-                )
-            except:
-                allure.attach(
-                    str(sample.user_input),
-                    name="Raw Conversation Data",
-                    attachment_type=allure.attachment_type.TEXT
-                )
-
-            # Attach retrieved contexts if present
-            if hasattr(sample, "retrieved_contexts"):
-                allure.attach(
-                    json.dumps(sample.retrieved_contexts, indent=2, ensure_ascii=False),
-                    name="Retrieved Contexts",
-                    attachment_type=allure.attachment_type.TEXT
-                )
-
-            # Instantiate Answer Relevance metric
-            self.metric = AnswerRelevancy(llm=self.get_llm_wrapper)
-
-            # Calculate multi-turn score
-            score = await self.metric.multi_turn_ascore(sample)
-
-            # Attach the score
-            allure.attach(
-                str(score),
-                name="Answer Relevance Score (Multi-Turn)",
-                attachment_type=allure.attachment_type.TEXT
-            )
-
-        with allure.step(f"Multi-Turn Answer Relevance Score: {score}"):
-            pass
-
-        return score
 
     async def get_aspect_critic(self, sample):
         """
@@ -373,6 +241,8 @@ class MetricsEvaluator:
 
         with allure.step(f"AspectCritic Result: {result}"):
             pass
+
+        result.to_pandas()
 
         return result
 
@@ -497,4 +367,174 @@ class MetricsEvaluator:
             pass
 
         return final_score
+
+    async def get_conversational_memory_score(self, sample, response, chat_history=None):
+        """
+        Compute Conversational Memory Score in a single function.
+        Evaluates 4 memory dimensions using the LLM and returns a weighted score.
+        LLM instance is created inside this function.
+        """
+        with allure.step("Calculate Conversational Memory Score"):
+
+            # Attach conversation history & response
+            allure.attach(
+                str(chat_history),
+                name="Chat History",
+                attachment_type=allure.attachment_type.TEXT
+            )
+            allure.attach(
+                str(response),
+                name="Chatbot Response",
+                attachment_type=allure.attachment_type.TEXT
+            )
+
+            # ------------------------------------------------------
+            # 🔥 1. Get the LLM Instance
+            # ------------------------------------------------------
+            llm_client = self.get_llm_wrapper
+
+            # ------------------------------------------------------
+            # 🔥 2. Scoring Prompt
+            # ------------------------------------------------------
+            prompt = f"""
+            Evaluate the assistant response for conversational memory across 4 dimensions (scale 0–1).
+            Return ONLY a JSON dictionary.
+
+            Conversation History:
+            {chat_history}
+
+            Assistant Response:
+            {response}
+
+            Rate each of the following between 0 and 1:
+
+            1. memory_retention        - Ability to recall facts from earlier turns
+            2. context_carryover       - Ability to use context correctly from previous turns
+            3. contradiction_avoidance - Avoid contradictions with what was said earlier
+            4. implicit_recall         - Remembers details not explicitly repeated
+
+            Return JSON ONLY:
+            {{
+                "memory_retention": <float>,
+                "context_carryover": <float>,
+                "contradiction_avoidance": <float>,
+                "implicit_recall": <float>
+            }}
+            """
+
+            # ------------------------------------------------------
+            # 🔥 3. LLM Call (Fixed)
+            # ------------------------------------------------------
+            prompt_value = ChatPromptValue(messages=[
+                SystemMessage(content="You are an evaluator. Return only JSON."),
+                HumanMessage(content=prompt)
+            ])
+
+            llm_response = await llm_client.agenerate_text(prompt_value)
+
+            # ------------------------------------------------------
+            # 🔥 4. Extract CLEAN JSON String
+            # ------------------------------------------------------
+            gen = llm_response.generations[0][0]  # ChatGeneration
+            raw_text = gen.text or gen.message.content
+
+            clean_text = (
+                raw_text.replace("```json", "")
+                .replace("```", "")
+                .strip()
+            )
+
+            # ------------------------------------------------------
+            # 🔥 5. Parse JSON Output
+            # ------------------------------------------------------
+            try:
+                scores = json.loads(clean_text)
+            except Exception as e:
+                raise ValueError(
+                    "❌ LLM did not return valid JSON.\n"
+                    f"Raw text:\n{raw_text}\n"
+                    f"Cleaned:\n{clean_text}"
+                ) from e
+
+            # ------------------------------------------------------
+            # 🔥 6. Weighted Score Calculation
+            # ------------------------------------------------------
+            weights = {
+                "memory_retention": 0.35,
+                "context_carryover": 0.30,
+                "contradiction_avoidance": 0.20,
+                "implicit_recall": 0.15,
+            }
+
+            final_score = sum(scores[k] * weights[k] for k in weights)
+            final_score = round(final_score, 4)
+
+            # Attach scores
+            allure.attach(str(scores),
+                          "Conversational Memory Sub-Scores",
+                          allure.attachment_type.TEXT)
+
+            allure.attach(str(final_score),
+                          "Final Conversational Memory Score",
+                          allure.attachment_type.TEXT)
+
+        with allure.step(f"Conversational Memory Score: {final_score}"):
+            pass
+
+        return final_score
+
+    async def get_multiturn_faithfulness_score(self, sample, response, chat_history=None):
+        """
+        Calculate Faithfulness Score for multi-turn conversation.
+        Ensures the answer is grounded in RAG docs + conversation history.
+        """
+        # Build prompt for evaluation
+        eval_prompt = f"""
+        You are an evaluator. Your job is to score faithfulness of the AI's response.
+
+        ---- Question ----
+        {sample.user_input}
+
+        ---- Conversation History ----
+        {chat_history}
+
+        ---- Retrieved Documents ----
+        {response.get("retrieved_docs", [])}
+
+        ---- AI Response ----
+        {response.get("answer", "")}
+
+        Evaluate how grounded the answer is in:
+        1. Retrieved documents
+        2. Previous conversation turns
+        3. User question context
+
+        Score between 0 and 1:
+        - 1.0 = Fully grounded, no hallucination  
+        - 0.0 = Completely hallucinated  
+        - 0.5 = Partially grounded, partial fabrication
+
+        Provide only JSON:
+        {{
+          "faithfulness_score": <score>
+        }}
+        """
+
+        completion = await self.client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[{"role": "user", "content": eval_prompt}],
+            temperature=0
+        )
+
+        result = completion.choices[0].message["content"]
+
+        try:
+            result_json = json.loads(result)
+            score = result_json.get("faithfulness_score", 0.0)
+        except Exception:
+            score = 0.0
+
+        return score
+
+
 

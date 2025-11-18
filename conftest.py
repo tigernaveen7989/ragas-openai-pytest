@@ -4,10 +4,13 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from ragas import SingleTurnSample, MultiTurnSample
 from ragas.llms import LangchainLLMWrapper
-from ragas.messages import HumanMessage, AIMessage
-
+from utilities.assertions import Assertions
 from utilities.ironman import IronMan
 from utilities.logger import LoggerFactory
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.application import MIMEApplication
 
 
 # -------------------------------
@@ -27,10 +30,17 @@ def pytest_addoption(parser):
 # Configure allure report directory
 # -------------------------------
 def pytest_configure(config):
+    # ----- Existing Allure Setup (keep this unchanged) -----
     root_dir = os.path.dirname(os.path.abspath(__file__))
     allure_dir = os.path.join(root_dir, "testreports", "allure-results")
     os.makedirs(allure_dir, exist_ok=True)
     config.option.allure_report_dir = allure_dir
+
+    # ----- Add pytest-html metadata (non-conflicting) -----
+    if hasattr(config, "_metadata"):
+        config._metadata['Project'] = 'Airline Automation'
+        config._metadata['Module'] = 'Booking Engine'
+        config._metadata['Tester'] = 'Naveen Kumar'
 
 
 # -------------------------------
@@ -40,6 +50,9 @@ def pytest_configure(config):
 def logger():
     return LoggerFactory.get_logger("pytest_logger")
 
+@pytest.fixture
+def assertions(logger):
+    return Assertions(logger)
 
 # -------------------------------
 # LLM Wrapper fixture (reads model + temperature from pytest.ini)
@@ -130,5 +143,65 @@ def get_multiturn_data(request, logger):
         references=test_data.get("reference", "")
     )
     response = [response_dictionary.get("answer", "")]
-    return sample, response
+    return sample, response, question_chathistory
 
+
+# Remove unnecessary metadata
+def pytest_metadata(metadata):
+    metadata.pop('Packages', None)
+    metadata.pop('Plugins', None)
+
+def send_email_with_report(logger):
+
+    # Load SMTP details from .env
+    smtp_host = os.getenv("SMTP_HOST")
+    smtp_port = int(os.getenv("SMTP_PORT"))
+    REPORT_PATH = "testreports/report.html"
+    sender = os.getenv("SENDER_EMAIL")
+
+    # Receiver list support
+    receivers = os.getenv("EMAIL_RECEIVER_LIST")
+    if receivers:
+        receivers = [r.strip() for r in receivers.split(",")]
+    else:
+        receivers = [os.getenv("RECEIVER_EMAIL")]
+
+    subject = os.getenv("EMAIL_SUBJECT", "Pytest Execution Report")
+    body = "Hello,<br><br>Please find the attached Pytest execution report.<br><br>Regards,<br>SabreMosaic QA"
+
+    # Prepare email
+    message = MIMEMultipart()
+    message["From"] = sender
+    message["To"] = ", ".join(receivers)
+    message["Subject"] = subject
+    message.attach(MIMEText(body, "html"))
+
+    # Attach HTML report
+    with open(REPORT_PATH, "rb") as f:
+        part = MIMEApplication(f.read(), Name="report.html")
+        part["Content-Disposition"] = 'attachment; filename=\"report.html\"'
+        message.attach(part)
+
+    # Try SMTP with and without TLS automatically
+    try:
+        with smtplib.SMTP(smtp_host, smtp_port, timeout=30) as server:
+            server.ehlo()
+
+            try:
+                server.starttls()
+                logger.info("🔐 TLS connection established")
+            except Exception:
+                logger.info("⚠️ TLS not supported, sending without TLS")
+
+            server.sendmail(sender, receivers, message.as_string())
+
+        logger.info("📧 Email sent successfully!")
+
+    except Exception as e:
+        logger.info(f"❌ Error sending email: {e}")
+
+
+def pytest_terminal_summary(terminalreporter, exitstatus, config):
+    logger = LoggerFactory.get_logger("pytest_logger")
+    logger.info("pytest execution finished. Sending email report...")
+    send_email_with_report(logger)

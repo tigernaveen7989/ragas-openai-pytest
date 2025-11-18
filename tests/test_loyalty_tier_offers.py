@@ -9,7 +9,10 @@ from utilities.assertions import Assertions
 @allure.feature("Loyalty Tier Offers")
 class TestLoyaltyTierOffers:
     feature_name = "loyalty_tier_offers"
-    assertions = Assertions()
+
+    @pytest.fixture(autouse=True)
+    def setup_assertions(self, assertions):
+        self.assertions = assertions
 
     @allure.story("Faithfulness Evaluation")
     @allure.severity(allure.severity_level.CRITICAL)
