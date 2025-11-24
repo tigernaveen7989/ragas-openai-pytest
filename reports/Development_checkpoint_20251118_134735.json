@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "tests.test_loyalty_tier_offers",
+          "name": "test_faithfulness[get_singleturn_data0]",
+          "developer": "-",
+          "test_description": "",
+          "status": "Skipped",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Test was not executed",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "18 Nov 2025, 13:47",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

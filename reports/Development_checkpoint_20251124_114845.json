@@ -1,0 +1,28 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "tests.test_rest_assured",
+          "name": "test_aspect_critic[get_multiturn_data0]",
+          "developer": "-",
+          "test_description": "",
+          "status": "Skipped",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Test was not executed",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "24 Nov 2025, 11:49",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}

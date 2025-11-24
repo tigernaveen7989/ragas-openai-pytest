@@ -1,0 +1,72 @@
+{
+  "specs": {},
+  "functional_spec_count": {},
+  "testsuites": [
+    {
+      "cases": [
+        {
+          "classname": "tests.test_rest_assured",
+          "name": "test_aspect_critic[get_multiturn_data0]",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Setup failed: file C:\\Users\\SG0704235\\PycharmProjects\\ragas-openai-pytest\\tests\\test_rest_assured.py, line 14\n      @allure.story(\"Aspect Critic Evaluation\")\n      @allure.description(\n          \"Validates that the model response remains aspect critic to the reference context for rest assured\")\n      @pytest.mark.asyncio\n      @pytest.mark.parametrize(\"get_multiturn_data\", IronMan.load_test_data(feature_name, \"multiturn\"), indirect=True)\n      async def test_aspect_critic(self, get_llm_wrapper, get_multiturn_data, logger, assertions):\n          \"\"\"\n          Test to validate aspect critic score using reusable helper class.\n          \"\"\"\n          logger.info(get_multiturn_data)\n          sample, response, question_chathistory = get_multiturn_data\n          evaluator = MetricsEvaluator(get_llm_wrapper)\n          result = await evaluator.get_aspect_critic(sample=sample)\n          logger.info(f\"Aspect Critic Result: {result}\")\n          assertions.assert_aspect_critic(result, threshold=0.7)\nE       fixture 'get_multiturn_data' not found\n>       available fixtures: __pytest_repeat_step_number, _class_scoped_runner, _function_scoped_runner, _module_scoped_runner, _package_scoped_runner, _session_scoped_runner, anyio_backend, anyio_backend_name, anyio_backend_options, assertions, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, doctest_namespace, event_loop_policy, extra, extras, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, get_llm_wrapper, include_metadata_in_junit_xml, logger, metadata, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, save_test_result, testrun_uid, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory, worker_id\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\SG0704235\\PycharmProjects\\ragas-openai-pytest\\tests\\test_rest_assured.py:14",
+          "functional_specifications": [],
+          "categories": []
+        },
+        {
+          "classname": "tests.test_rest_assured",
+          "name": "test_aspect_critic[get_multiturn_data1]",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Setup failed: file C:\\Users\\SG0704235\\PycharmProjects\\ragas-openai-pytest\\tests\\test_rest_assured.py, line 14\n      @allure.story(\"Aspect Critic Evaluation\")\n      @allure.description(\n          \"Validates that the model response remains aspect critic to the reference context for rest assured\")\n      @pytest.mark.asyncio\n      @pytest.mark.parametrize(\"get_multiturn_data\", IronMan.load_test_data(feature_name, \"multiturn\"), indirect=True)\n      async def test_aspect_critic(self, get_llm_wrapper, get_multiturn_data, logger, assertions):\n          \"\"\"\n          Test to validate aspect critic score using reusable helper class.\n          \"\"\"\n          logger.info(get_multiturn_data)\n          sample, response, question_chathistory = get_multiturn_data\n          evaluator = MetricsEvaluator(get_llm_wrapper)\n          result = await evaluator.get_aspect_critic(sample=sample)\n          logger.info(f\"Aspect Critic Result: {result}\")\n          assertions.assert_aspect_critic(result, threshold=0.7)\nE       fixture 'get_multiturn_data' not found\n>       available fixtures: __pytest_repeat_step_number, _class_scoped_runner, _function_scoped_runner, _module_scoped_runner, _package_scoped_runner, _session_scoped_runner, anyio_backend, anyio_backend_name, anyio_backend_options, assertions, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, doctest_namespace, event_loop_policy, extra, extras, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, get_llm_wrapper, include_metadata_in_junit_xml, logger, metadata, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, save_test_result, testrun_uid, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory, worker_id\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\SG0704235\\PycharmProjects\\ragas-openai-pytest\\tests\\test_rest_assured.py:14",
+          "functional_specifications": [],
+          "categories": []
+        },
+        {
+          "classname": "tests.test_rest_assured",
+          "name": "test_aspect_critic[get_multiturn_data2]",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Setup failed: file C:\\Users\\SG0704235\\PycharmProjects\\ragas-openai-pytest\\tests\\test_rest_assured.py, line 14\n      @allure.story(\"Aspect Critic Evaluation\")\n      @allure.description(\n          \"Validates that the model response remains aspect critic to the reference context for rest assured\")\n      @pytest.mark.asyncio\n      @pytest.mark.parametrize(\"get_multiturn_data\", IronMan.load_test_data(feature_name, \"multiturn\"), indirect=True)\n      async def test_aspect_critic(self, get_llm_wrapper, get_multiturn_data, logger, assertions):\n          \"\"\"\n          Test to validate aspect critic score using reusable helper class.\n          \"\"\"\n          logger.info(get_multiturn_data)\n          sample, response, question_chathistory = get_multiturn_data\n          evaluator = MetricsEvaluator(get_llm_wrapper)\n          result = await evaluator.get_aspect_critic(sample=sample)\n          logger.info(f\"Aspect Critic Result: {result}\")\n          assertions.assert_aspect_critic(result, threshold=0.7)\nE       fixture 'get_multiturn_data' not found\n>       available fixtures: __pytest_repeat_step_number, _class_scoped_runner, _function_scoped_runner, _module_scoped_runner, _package_scoped_runner, _session_scoped_runner, anyio_backend, anyio_backend_name, anyio_backend_options, assertions, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, doctest_namespace, event_loop_policy, extra, extras, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, get_llm_wrapper, include_metadata_in_junit_xml, logger, metadata, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, save_test_result, testrun_uid, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory, worker_id\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\SG0704235\\PycharmProjects\\ragas-openai-pytest\\tests\\test_rest_assured.py:14",
+          "functional_specifications": [],
+          "categories": []
+        },
+        {
+          "classname": "tests.test_rest_assured",
+          "name": "test_aspect_critic[get_multiturn_data3]",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Setup failed: file C:\\Users\\SG0704235\\PycharmProjects\\ragas-openai-pytest\\tests\\test_rest_assured.py, line 14\n      @allure.story(\"Aspect Critic Evaluation\")\n      @allure.description(\n          \"Validates that the model response remains aspect critic to the reference context for rest assured\")\n      @pytest.mark.asyncio\n      @pytest.mark.parametrize(\"get_multiturn_data\", IronMan.load_test_data(feature_name, \"multiturn\"), indirect=True)\n      async def test_aspect_critic(self, get_llm_wrapper, get_multiturn_data, logger, assertions):\n          \"\"\"\n          Test to validate aspect critic score using reusable helper class.\n          \"\"\"\n          logger.info(get_multiturn_data)\n          sample, response, question_chathistory = get_multiturn_data\n          evaluator = MetricsEvaluator(get_llm_wrapper)\n          result = await evaluator.get_aspect_critic(sample=sample)\n          logger.info(f\"Aspect Critic Result: {result}\")\n          assertions.assert_aspect_critic(result, threshold=0.7)\nE       fixture 'get_multiturn_data' not found\n>       available fixtures: __pytest_repeat_step_number, _class_scoped_runner, _function_scoped_runner, _module_scoped_runner, _package_scoped_runner, _session_scoped_runner, anyio_backend, anyio_backend_name, anyio_backend_options, assertions, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, doctest_namespace, event_loop_policy, extra, extras, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, get_llm_wrapper, include_metadata_in_junit_xml, logger, metadata, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, save_test_result, testrun_uid, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory, worker_id\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\SG0704235\\PycharmProjects\\ragas-openai-pytest\\tests\\test_rest_assured.py:14",
+          "functional_specifications": [],
+          "categories": []
+        },
+        {
+          "classname": "tests.test_rest_assured",
+          "name": "test_aspect_critic[get_multiturn_data4]",
+          "developer": "-",
+          "test_description": "",
+          "status": "Failed",
+          "logs": "<ul style='list-style-type: none; padding: 0;'></ul>",
+          "details": "Setup failed: file C:\\Users\\SG0704235\\PycharmProjects\\ragas-openai-pytest\\tests\\test_rest_assured.py, line 14\n      @allure.story(\"Aspect Critic Evaluation\")\n      @allure.description(\n          \"Validates that the model response remains aspect critic to the reference context for rest assured\")\n      @pytest.mark.asyncio\n      @pytest.mark.parametrize(\"get_multiturn_data\", IronMan.load_test_data(feature_name, \"multiturn\"), indirect=True)\n      async def test_aspect_critic(self, get_llm_wrapper, get_multiturn_data, logger, assertions):\n          \"\"\"\n          Test to validate aspect critic score using reusable helper class.\n          \"\"\"\n          logger.info(get_multiturn_data)\n          sample, response, question_chathistory = get_multiturn_data\n          evaluator = MetricsEvaluator(get_llm_wrapper)\n          result = await evaluator.get_aspect_critic(sample=sample)\n          logger.info(f\"Aspect Critic Result: {result}\")\n          assertions.assert_aspect_critic(result, threshold=0.7)\nE       fixture 'get_multiturn_data' not found\n>       available fixtures: __pytest_repeat_step_number, _class_scoped_runner, _function_scoped_runner, _module_scoped_runner, _package_scoped_runner, _session_scoped_runner, anyio_backend, anyio_backend_name, anyio_backend_options, assertions, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, doctest_namespace, event_loop_policy, extra, extras, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, get_llm_wrapper, include_metadata_in_junit_xml, logger, metadata, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, save_test_result, testrun_uid, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory, worker_id\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\SG0704235\\PycharmProjects\\ragas-openai-pytest\\tests\\test_rest_assured.py:14",
+          "functional_specifications": [],
+          "categories": []
+        }
+      ]
+    }
+  ],
+  "test_environment": "Development",
+  "timestamp": "24 Nov 2025, 12:55",
+  "img_url": "https://icon.icepanel.io/Technology/svg/pytest.svg",
+  "test_status": "complete",
+  "report_title": "pytest HTML Report",
+  "category_count": {},
+  "all_categories": []
+}
