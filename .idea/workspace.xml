@@ -5,21 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8b627e9-b58c-45e4-b4ce-24a071cab7f4" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/reports/Development_checkpoint_20251118_132226.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Development_checkpoint_20251118_132658.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Development_checkpoint_20251118_132950.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Development_checkpoint_20251118_133138.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Development_checkpoint_20251118_133309.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Development_checkpoint_20251118_133616.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/report_20251118_132230.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/report_20251118_132729.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/report_20251118_133209.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/report_20251118_133401.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/report_20251118_133706.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utilities/email_reporter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/email_reporter.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/email_reporter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

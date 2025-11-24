@@ -11,12 +11,10 @@ from utilities.ironman import IronMan
 from utilities.logger import LoggerFactory
 from utilities.email_reporter import PytestEmailReporter
 
-
 # ---------------------------------------
 # Load .env variables
 # ---------------------------------------
 load_dotenv()
-
 
 # ---------------------------------------
 # Pytest options
@@ -25,7 +23,6 @@ def pytest_addoption(parser):
     parser.addini("llm_model", help="LLM model name", default="gpt-4o-mini")
     parser.addini("llm_temperature", help="LLM temperature", default="0")
 
-
 # ---------------------------------------
 # Logger fixture
 # ---------------------------------------
@@ -33,11 +30,9 @@ def pytest_addoption(parser):
 def logger():
     return LoggerFactory.get_logger("pytest_logger")
 
-
 @pytest.fixture
 def assertions(logger):
     return Assertions(logger)
-
 
 # ---------------------------------------
 # LLM Wrapper fixture
@@ -58,7 +53,6 @@ def get_llm_wrapper(request):
     )
     return LangchainLLMWrapper(llm)
 
-
 # ---------------------------------------
 # RAGAS Single Turn Fixture
 # ---------------------------------------
@@ -77,7 +71,6 @@ def get_singleturn_data(request, logger):
         reference=test_data["reference"]
     )
     return sample
-
 
 # ---------------------------------------
 # RAGAS Multi Turn Fixture
@@ -118,14 +111,12 @@ def get_multiturn_data(request, logger):
     response = [response_dict.get("answer", "")]
     return sample, response, question_chathistory
 
-
 # ---------------------------------------
 # Clean pytest metadata
 # ---------------------------------------
 def pytest_metadata(metadata):
     metadata.pop("Packages", None)
     metadata.pop("Plugins", None)
-
 
 # =====================================================================
 # EMAIL REPORTER HOOKS
@@ -136,7 +127,7 @@ def pytest_sessionstart(session):
 
     session.email_reporter = reporter
 
-    # Register plugin → pytest automatically calls reporter.logreport()
+    # Register plugin
     session.config.pluginmanager.register(reporter, name="email_reporter_plugin")
 
     reporter.session_start()
