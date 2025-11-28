@@ -1,0 +1,95 @@
+pipeline {
+    agent any
+
+    environment {
+        ALLURE_RESULTS = 'testreports/allure-results'
+        ALLURE_REPORT  = 'allure-report'
+        SONAR_LOGIN = credentials('sonar-token')   // Jenkins credential ID
+    }
+
+    stages {
+
+        stage('Clone Repo') {
+            steps {
+                echo "Cloning GitHub repository..."
+                git branch: 'main', url: 'https://github.com/tigernaveen7989/ragas-openai-pytest.git'
+            }
+        }
+
+        stage('Setup Python Environment') {
+            steps {
+                echo "Creating virtual environment..."
+                bat """
+                    python -m venv venv
+                    call venv\\Scripts\\activate
+                    pip install --upgrade pip
+                    pip install -r requirements.txt
+                """
+            }
+        }
+
+        stage('Run Pytest') {
+            steps {
+                echo "Executing tests..."
+                bat """
+                    call venv\\Scripts\\activate
+                    pytest --alluredir=${ALLURE_RESULTS}
+                """
+            }
+        }
+
+        stage('SonarQube Analysis') {
+            environment {
+                SCANNER_HOME = tool 'SonarScanner'  // Jenkins global tool name
+            }
+            steps {
+                script {
+                    withSonarQubeEnv('SonarQubeServer') {   // Jenkins SonarQube Server name
+                        bat """
+                            call venv\\Scripts\\activate
+                            "${env.SCANNER_HOME}\\bin\\sonar-scanner" ^
+                            -Dsonar.projectKey=ragas-openai ^
+                            -Dsonar.sources=. ^
+                            -Dsonar.python.coverage.reportPaths=coverage.xml ^
+                            -Dsonar.login=${SONAR_LOGIN}
+                        """
+                    }
+                }
+            }
+        }
+
+        stage('Allure Report Generation') {
+            steps {
+                echo "Generating Allure HTML Report..."
+                bat """
+                    allure generate ${ALLURE_RESULTS} -o ${ALLURE_REPORT} --clean
+                """
+            }
+        }
+
+        stage('Publish Allure Report') {
+            steps {
+                allure([
+                    includeProperties: false,
+                    jdk: '',
+                    properties: [],
+                    reportBuildPolicy: 'ALWAYS',
+                    results: [[path: "${ALLURE_RESULTS}"]]
+                ])
+            }
+        }
+    }
+
+    post {
+        always {
+            echo "Cleaning workspace..."
+            cleanWs()
+        }
+        success {
+            echo "Pipeline executed successfully!"
+        }
+        failure {
+            echo "Pipeline failed. Check logs."
+        }
+    }
+}
