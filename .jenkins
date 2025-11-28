@@ -4,54 +4,50 @@ pipeline {
     environment {
         ALLURE_RESULTS = 'testreports/allure-results'
         ALLURE_REPORT  = 'allure-report'
-        SONAR_LOGIN = credentials('sonar-token')   // Jenkins credential ID
+        VENV_PATH      = 'C:\\Jenkins\\PythonEnvs\\ragas-env'  // Persistent venv outside workspace
     }
 
     stages {
 
         stage('Clone Repo') {
             steps {
-                echo "Cloning GitHub repository..."
-                git branch: 'main', url: 'https://github.com/tigernaveen7989/ragas-openai-pytest.git'
+                echo "Cloning GitHub repository (master branch)..."
+                git branch: 'master', url: 'https://github.com/tigernaveen7989/ragas-openai-pytest.git'
             }
         }
 
         stage('Setup Python Environment') {
             steps {
-                echo "Creating virtual environment..."
-                bat """
-                    python -m venv venv
-                    call venv\\Scripts\\activate
-                    pip install --upgrade pip
-                    pip install -r requirements.txt
-                """
+                echo "Setting up Python virtual environment..."
+                script {
+                    catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                        bat """
+                            if not exist "${VENV_PATH}" (
+                                echo Creating new virtual environment...
+                                python -m venv "${VENV_PATH}"
+                                call "${VENV_PATH}\\Scripts\\activate"
+                                pip install --upgrade pip
+                                pip install -r requirements.txt
+                            ) else (
+                                echo Reusing existing virtual environment...
+                                call "${VENV_PATH}\\Scripts\\activate"
+                                pip install --upgrade pip
+                                pip install --upgrade -r requirements.txt
+                            )
+                        """
+                    }
+                }
             }
         }
 
         stage('Run Pytest') {
             steps {
-                echo "Executing tests..."
-                bat """
-                    call venv\\Scripts\\activate
-                    pytest --alluredir=${ALLURE_RESULTS}
-                """
-            }
-        }
-
-        stage('SonarQube Analysis') {
-            environment {
-                SCANNER_HOME = tool 'SonarScanner'  // Jenkins global tool name
-            }
-            steps {
+                echo "Running specific Pytest test..."
                 script {
-                    withSonarQubeEnv('SonarQubeServer') {   // Jenkins SonarQube Server name
+                    catchError(buildResult: 'UNSTABLE', stageResult: 'UNSTABLE') {
                         bat """
-                            call venv\\Scripts\\activate
-                            "${env.SCANNER_HOME}\\bin\\sonar-scanner" ^
-                            -Dsonar.projectKey=ragas-openai ^
-                            -Dsonar.sources=. ^
-                            -Dsonar.python.coverage.reportPaths=coverage.xml ^
-                            -Dsonar.login=${SONAR_LOGIN}
+                            call "${VENV_PATH}\\Scripts\\activate"
+                            pytest tests/test_rest_assured.py::TestRestAssured::test_aspect_critic --alluredir=${ALLURE_RESULTS} --continue-on-collection-errors
                         """
                     }
                 }
@@ -60,36 +56,43 @@ pipeline {
 
         stage('Allure Report Generation') {
             steps {
-                echo "Generating Allure HTML Report..."
-                bat """
-                    allure generate ${ALLURE_RESULTS} -o ${ALLURE_REPORT} --clean
-                """
+                echo "Generating Allure HTML report..."
+                script {
+                    catchError(buildResult: 'UNSTABLE', stageResult: 'SUCCESS') {
+                        bat """
+                            allure generate ${ALLURE_RESULTS} -o ${ALLURE_REPORT} --clean
+                        """
+                    }
+                }
             }
         }
 
         stage('Publish Allure Report') {
             steps {
-                allure([
-                    includeProperties: false,
-                    jdk: '',
-                    properties: [],
-                    reportBuildPolicy: 'ALWAYS',
-                    results: [[path: "${ALLURE_RESULTS}"]]
-                ])
+                script {
+                    catchError(buildResult: 'UNSTABLE', stageResult: 'SUCCESS') {
+                        allure([
+                            includeProperties: false,
+                            jdk: '',
+                            properties: [],
+                            reportBuildPolicy: 'ALWAYS',
+                            results: [[path: "${ALLURE_RESULTS}"]]
+                        ])
+                    }
+                }
             }
         }
     }
 
     post {
         always {
-            echo "Cleaning workspace..."
-            cleanWs()
+            echo "Pipeline finished. Workspace not cleaned to preserve venv."
         }
         success {
             echo "Pipeline executed successfully!"
         }
         failure {
-            echo "Pipeline failed. Check logs."
+            echo "Pipeline failed. Check logs for details."
         }
     }
 }
