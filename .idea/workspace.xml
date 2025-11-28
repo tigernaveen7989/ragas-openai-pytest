@@ -5,10 +5,115 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8b627e9-b58c-45e4-b4ce-24a071cab7f4" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/.coverage" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/.sonar_lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/report-task.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/symbols-130.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/symbols-138.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/symbols-139.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/symbols-140.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/symbols-141.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/symbols-20.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/symbols-24.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/symbols-25.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/symbols-29.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/symbols-30.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/symbols-31.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-10.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-100.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-101.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-102.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-103.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-104.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-105.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-106.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-107.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-108.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-109.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-11.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-110.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-111.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-118.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-119.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-12.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-120.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-121.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-126.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-127.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-128.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-129.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-130.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-138.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-139.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-140.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-141.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-20.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-24.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-25.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-29.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-30.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-31.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-4.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-5.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-6.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-7.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-75.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-76.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-77.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-78.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-79.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-80.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-81.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-82.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-83.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-84.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-85.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-86.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-87.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-88.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-89.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-9.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-90.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-91.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-92.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-93.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-94.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-95.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-96.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-97.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-98.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/syntax-highlightings-99.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.scannerwork/scanner-report/telemetry-entries.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_173403.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_174628.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_175505.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_185737.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_193930.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_194632.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/Development_checkpoint_20251128_121938.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/Development_checkpoint_20251128_125623.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/Development_checkpoint_20251128_130318.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/Development_checkpoint_20251128_130629.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/report_20251124_173804.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/report_20251124_175042.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/report_20251124_180149.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/report_20251124_190314.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/report_20251124_194400.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/report_20251124_194943.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/report_20251128_121952.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/report_20251128_125642.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/report_20251128_130334.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/report_20251128_132716.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sonar-project.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/Development_checkpoint_20251128_110900.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/Development_checkpoint_20251128_112327.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/report_20251128_111038.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/reports/report_20251128_112452.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/email_reporter.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/email_reporter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_flight_booking.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_flight_booking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_loyalty_tier_offers.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_loyalty_tier_offers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +169,7 @@
     &quot;Python tests.Python tests in test_loyalty_tier_offers.py.executor&quot;: &quot;Run&quot;,
     &quot;Python.test_loyalty_tier_offers.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/SG0704235/PycharmProjects/ragas-openai-pytest/dataset/rest_assured&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/SG0704235/PycharmProjects/llm-examples/llm-examples&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   }
 }</component>
@@ -75,29 +180,7 @@
       <recent name="C:\Users\SG0704235\PycharmProjects\ragas-openai-pytest\dataset\modify_booking" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_rest_assured.TestRestAssured.test_aspect_critic">
-    <configuration name="test_loyalty_tier_offers" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ragas-openai-pytest" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test_loyalty_tier_offers.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Python tests for test_rest_assured.TestRestAssured.test_conversational_memory_score">
     <configuration name="Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_context_precision" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="ragas-openai-pytest" />
       <option name="ENV_FILES" value="" />
@@ -128,21 +211,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_rubric_score" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="ragas-openai-pytest" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_loyalty_tier_offers.TestLoyaltyTierOffers.test_rubric_score&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests for test_rest_assured.TestRestAssured.test_aspect_critic" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="ragas-openai-pytest" />
       <option name="ENV_FILES" value="" />
@@ -158,13 +226,43 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for test_rest_assured.TestRestAssured.test_conversational_memory_score" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="ragas-openai-pytest" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_rest_assured.TestRestAssured.test_conversational_memory_score&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_rest_assured.TestRestAssured.test_top_adherence_score" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="ragas-openai-pytest" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_rest_assured.TestRestAssured.test_top_adherence_score&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_rest_assured.TestRestAssured.test_conversational_memory_score" />
+        <item itemvalue="Python tests.Python tests for test_rest_assured.TestRestAssured.test_top_adherence_score" />
         <item itemvalue="Python tests.Python tests for test_rest_assured.TestRestAssured.test_aspect_critic" />
         <item itemvalue="Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_context_precision" />
         <item itemvalue="Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_faithfulness" />
-        <item itemvalue="Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_rubric_score" />
-        <item itemvalue="Python.test_loyalty_tier_offers" />
       </list>
     </recent_temporary>
   </component>

@@ -10,17 +10,13 @@ from utilities.assertions import Assertions
 class TestLoyaltyTierOffers:
     feature_name = "loyalty_tier_offers"
 
-    @pytest.fixture(autouse=True)
-    def setup_assertions(self, assertions):
-        self.assertions = assertions
-
     @allure.story("Faithfulness Evaluation")
     @allure.severity(allure.severity_level.CRITICAL)
     @allure.description(
         "Validates that the model response remains faithful to the reference context for loyalty tier offers.")
     @pytest.mark.asyncio
     @pytest.mark.parametrize("get_singleturn_data", IronMan.load_test_data(feature_name), indirect=True)
-    async def test_faithfulness(self, get_llm_wrapper, get_singleturn_data, logger):
+    async def test_faithfulness(self, get_llm_wrapper, get_singleturn_data, logger, assertions):
         """
         Test to validate faithfulness score using reusable helper class.
         """
@@ -29,7 +25,8 @@ class TestLoyaltyTierOffers:
         logger.info(f"Faithfulness Score: {score}")
 
         # Validation threshold
-        self.assertions.assert_faithfulness(score)
+        assertions.assert_faithfulness(score)
+
     # -------------------------------------------------------------------------
 
     @allure.story("Context Precision Evaluation")
@@ -39,7 +36,7 @@ class TestLoyaltyTierOffers:
     )
     @pytest.mark.asyncio
     @pytest.mark.parametrize("get_singleturn_data", IronMan.load_test_data(feature_name), indirect=True)
-    async def test_context_precision(self, get_llm_wrapper, get_singleturn_data, logger):
+    async def test_context_precision(self, get_llm_wrapper, get_singleturn_data, logger, assertions):
         """
         Test to validate Context Precision score using reusable helper class.
         """
@@ -47,7 +44,7 @@ class TestLoyaltyTierOffers:
         score = await evaluator.get_context_precision_score(get_singleturn_data)
         logger.info(f"Context Precision Score: {score}")
 
-        self.assertions.assert_context_precision(score)
+        assertions.assert_context_precision(score)
 
     # -------------------------------------------------------------------------
     @allure.story("Context Recall Evaluation")
@@ -57,7 +54,7 @@ class TestLoyaltyTierOffers:
     )
     @pytest.mark.asyncio
     @pytest.mark.parametrize("get_singleturn_data", IronMan.load_test_data(feature_name), indirect=True)
-    async def test_context_recall(self, get_llm_wrapper, get_singleturn_data, logger):
+    async def test_context_recall(self, get_llm_wrapper, get_singleturn_data, logger, assertions):
         """
         Test to validate Context Recall score using reusable helper class.
         """
@@ -65,7 +62,7 @@ class TestLoyaltyTierOffers:
         score = await evaluator.get_context_recall_score(get_singleturn_data)
         logger.info(f"Context Recall Score: {score}")
 
-        self.assertions.assert_context_recall(score)
+        assertions.assert_context_recall(score)
 
     # -------------------------------------------------------------------------
     @allure.story("Answer Relavancy Evaluation")
@@ -75,7 +72,7 @@ class TestLoyaltyTierOffers:
     )
     @pytest.mark.asyncio
     @pytest.mark.parametrize("get_singleturn_data", IronMan.load_test_data(feature_name), indirect=True)
-    async def test_answer_relevancy(self, get_llm_wrapper, get_singleturn_data, logger):
+    async def test_answer_relevancy(self, get_llm_wrapper, get_singleturn_data, logger, assertions):
         """
         Test to validate Answer Relevancy score using reusable helper class.
         """
@@ -83,7 +80,7 @@ class TestLoyaltyTierOffers:
         score = await evaluator.get_answer_relevancy_score(get_singleturn_data)
         logger.info(f"Answer Relevancy Score: {score}")
 
-        self.assertions.assert_answer_relevancy(score)
+        assertions.assert_answer_relevancy(score)
 
     # -------------------------------------------------------------------------
     @allure.story("Factual Correctness Evaluation")
@@ -93,7 +90,7 @@ class TestLoyaltyTierOffers:
     )
     @pytest.mark.asyncio
     @pytest.mark.parametrize("get_singleturn_data", IronMan.load_test_data(feature_name), indirect=True)
-    async def test_factual_correctness(self, get_llm_wrapper, get_singleturn_data, logger):
+    async def test_factual_correctness(self, get_llm_wrapper, get_singleturn_data, logger, assertions):
         """
         Test to validate Factual Correctness score using reusable helper class.
         """
@@ -101,7 +98,8 @@ class TestLoyaltyTierOffers:
         score = await evaluator.get_factual_correctness_score(get_singleturn_data)
         logger.info(f"Factual Correctness Score: {score}")
 
-        self.assertions.assert_factual_correctness(score)
+        assertions.assert_factual_correctness(score)
+
     # -------------------------------------------------------------------------
 
     @allure.story("Rubric Evaluation")
@@ -115,7 +113,7 @@ class TestLoyaltyTierOffers:
         IronMan.load_test_data("loyalty_tier_offers"),
         indirect=True
     )
-    async def test_rubric_score(self, get_llm_wrapper, get_singleturn_data, logger):
+    async def test_rubric_score(self, get_llm_wrapper, get_singleturn_data, logger, assertions):
         """
         Test to validate Rubric Score using reusable helper class.
         """
@@ -123,4 +121,4 @@ class TestLoyaltyTierOffers:
         score = await evaluator.get_rubric_score(get_singleturn_data)
         logger.info(f"Rubric Score: {score}")
 
-        self.assertions.assert_rubric(score)
+        assertions.assert_rubric(score)

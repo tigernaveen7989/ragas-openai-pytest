@@ -1,0 +1,6 @@
+projectKey=pytest_project
+serverUrl=http://localhost:9000
+serverVersion=25.10.0.114319
+dashboardUrl=http://localhost:9000/dashboard?id=pytest_project
+ceTaskId=c7747402-4d6b-46c6-a7d6-89e8cf3e8365
+ceTaskUrl=http://localhost:9000/api/ce/task?id=c7747402-4d6b-46c6-a7d6-89e8cf3e8365
