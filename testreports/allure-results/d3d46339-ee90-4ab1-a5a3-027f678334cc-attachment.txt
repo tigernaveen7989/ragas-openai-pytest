@@ -1,1 +1,0 @@
-['Rest\u202fAssured is a powerful API released by Google—much like Selenium for the web—that lets you automate and test RESTful APIs.']

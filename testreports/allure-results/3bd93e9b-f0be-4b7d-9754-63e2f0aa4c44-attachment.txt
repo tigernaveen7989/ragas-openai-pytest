@@ -1,1 +1,0 @@
-['Performance testing is a type of non‑functional testing that evaluates how an application behaves under a specific load. It measures key metrics such as response time, throughput, error rate, and resource usage to determine if the system meets performance requirements and can scale to the expected user volume.']

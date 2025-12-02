@@ -1,1 +1,0 @@
-['Playwright is used for automating end‑to‑end tests of web applications. It lets you run fast, reliable, cross‑browser UI tests and API tests, and generate detailed reports—all in a single, modern framework.']

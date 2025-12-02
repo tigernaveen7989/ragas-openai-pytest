@@ -1,1 +1,0 @@
-{'instruction_adherence': 1.0, 'constraint_satisfaction': 1.0, 'hallucination_avoidance': 1.0, 'relevance_score': 1.0, 'format_score': 1.0, 'safety_policy_adherence': 1.0}

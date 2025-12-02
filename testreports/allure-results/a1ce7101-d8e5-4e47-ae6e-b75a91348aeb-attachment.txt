@@ -1,1 +1,0 @@
-['Jenkins is an automation server used to implement continuous integration and continuous delivery (CI/CD). It automates building, testing, packaging, and deploying code whenever changes are committed, enabling rapid, repeatable, and reliable software delivery.']

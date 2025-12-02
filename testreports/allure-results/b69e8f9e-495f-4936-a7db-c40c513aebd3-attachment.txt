@@ -1,1 +1,0 @@
-['Rest Assured is a Java‑based library that lets you write automated tests for RESTful APIs. It provides a fluent, expressive syntax for building HTTP requests, sending them, and validating responses (status codes, headers, JSON/XML payloads, schemas, authentication, etc.), making it a popular choice for API automation.']
