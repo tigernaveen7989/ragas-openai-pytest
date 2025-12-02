@@ -73,7 +73,7 @@ Supports **SonarQube** code quality and **Jenkins** automation.
 
 # 📊 Evaluation Metrics
 
-## 🔹 Singleton Metrics
+## 🔹 Single-turn Metrics
 - Faithfulness  
 - Context Precision  
 - Context Recall  
