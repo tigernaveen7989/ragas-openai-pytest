@@ -1,98 +1,138 @@
+
 pipeline {
     agent any
 
     environment {
-        ALLURE_RESULTS = 'testreports/allure-results'
-        ALLURE_REPORT  = 'allure-report'
-        VENV_PATH      = 'C:\\Jenkins\\PythonEnvs\\ragas-env'  // Persistent venv outside workspace
+        // Use workspace-relative paths for Jenkins Allure plugin
+        ALLURE_RESULTS = "testreports\\allure-results"
+        ALLURE_REPORT  = "allure-report"
+        VENV_PATH      = "C:\\Jenkins\\PythonEnvs\\ragas-env"
+    }
+
+    options {
+        skipDefaultCheckout(true)
+        // preserveStashes(buildCount: 5) // Optional if you want to stash/unstash
     }
 
     stages {
 
+        stage('Workspace Cleanup (hard)') {
+            steps {
+                echo "Force cleaning workspace at start..."
+                cleanWs(deleteDirs: true, disableDeferredWipeout: true, notFailBuild: true)
+            }
+        }
+
         stage('Clone Repo') {
             steps {
-                echo "Cloning GitHub repository (master branch)..."
-                git branch: 'master', url: 'https://github.com/tigernaveen7989/ragas-openai-pytest.git'
+                checkout([$class: 'GitSCM',
+                    branches: [[name: '*/master']],
+                    userRemoteConfigs: [[url: 'https://github.com/tigernaveen7989/ragas-openai-pytest.git']]
+                ])
             }
         }
 
-        stage('Setup Python Environment') {
+        stage('Prepare Clean Allure Folders') {
             steps {
-                echo "Setting up Python virtual environment..."
-                script {
-                    catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                        bat """
-                            if not exist "${VENV_PATH}" (
-                                echo Creating new virtual environment...
-                                python -m venv "${VENV_PATH}"
-                                call "${VENV_PATH}\\Scripts\\activate"
-                                pip install --upgrade pip
-                                pip install -r requirements.txt
-                            ) else (
-                                echo Reusing existing virtual environment...
-                                call "${VENV_PATH}\\Scripts\\activate"
-                                pip install --upgrade pip
-                                pip install --upgrade -r requirements.txt
-                            )
-                        """
-                    }
+                bat """
+                    echo Cleaning old Allure folders...
+                    if exist "${ALLURE_RESULTS}" rmdir /s /q "${ALLURE_RESULTS}"
+                    if exist "${ALLURE_REPORT}"  rmdir /s /q "${ALLURE_REPORT}"
+                    mkdir "${ALLURE_RESULTS}"
+                """
+            }
+        }
+
+        stage('Setup / Reuse Python Venv') {
+            steps {
+                bat """
+                    echo Checking Python venv at "${VENV_PATH}"...
+                    if not exist "${VENV_PATH}\\Scripts\\activate.bat" (
+                        echo Venv does not exist. Creating...
+                        python -m venv "${VENV_PATH}"
+                    ) else (
+                        echo Existing venv found. Reusing...
+                    )
+
+                    call "${VENV_PATH}\\Scripts\\activate"
+                    python --version
+                    pip --version
+
+                    pip install --upgrade pip
+                    pip install --upgrade -r requirements.txt
+                """
+            }
+        }
+
+        stage('Run Pytest (produce allure-results)') {
+            steps {
+                // If pytest fails, mark UNSTABLE but continue to publish report
+                catchError(buildResult: 'UNSTABLE', stageResult: 'UNSTABLE') {
+                    bat """
+                        call "${VENV_PATH}\\Scripts\\activate"
+                        pytest tests/test_rest_assured.py::TestRestAssured ^
+                            --alluredir="${ALLURE_RESULTS}" --continue-on-collection-errors
+                    """
                 }
             }
         }
 
-        stage('Run Pytest') {
+        stage('Validate allure-results') {
             steps {
-                echo "Running specific Pytest test..."
-                script {
-                    catchError(buildResult: 'UNSTABLE', stageResult: 'UNSTABLE') {
-                        bat """
-                            call "${VENV_PATH}\\Scripts\\activate"
-                            pytest tests/test_rest_assured.py::TestRestAssured::test_aspect_critic --alluredir=${ALLURE_RESULTS} --continue-on-collection-errors
-                        """
-                    }
-                }
+                // Fail clearly if results are missing/empty
+                bat """
+                    if not exist "${ALLURE_RESULTS}" (
+                        echo ERROR: Allure results folder not found: ${ALLURE_RESULTS}
+                        exit /b 1
+                    )
+                    for /f %%A in ('dir /b "${ALLURE_RESULTS}\\*.json" 2^>nul ^| find /c /v ""') do set COUNT=%%A
+                    if "%COUNT%"=="0" (
+                        echo ERROR: No .json files found in ${ALLURE_RESULTS}. Pytest may not have produced results.
+                        dir "${ALLURE_RESULTS}"
+                        exit /b 1
+                    ) else (
+                        echo Found %COUNT% Allure result files.
+                    )
+                """
             }
         }
 
-        stage('Allure Report Generation') {
+        stage('Generate Allure Report (fresh)') {
             steps {
-                echo "Generating Allure HTML report..."
-                script {
-                    catchError(buildResult: 'UNSTABLE', stageResult: 'SUCCESS') {
-                        bat """
-                            allure generate ${ALLURE_RESULTS} -o ${ALLURE_REPORT} --clean
-                        """
-                    }
-                }
+                // Do NOT swallow failures here; fail fast if generation fails
+                bat """
+                    echo Generating Allure report cleanly...
+                    if exist "${ALLURE_REPORT}" rmdir /s /q "${ALLURE_REPORT}"
+                    allure generate "${ALLURE_RESULTS}" -o "${ALLURE_REPORT}" --clean
+                """
             }
         }
 
-        stage('Publish Allure Report') {
+        stage('Publish Allure Report (Jenkins plugin)') {
             steps {
-                script {
-                    catchError(buildResult: 'UNSTABLE', stageResult: 'SUCCESS') {
-                        allure([
-                            includeProperties: false,
-                            jdk: '',
-                            properties: [],
-                            reportBuildPolicy: 'ALWAYS',
-                            results: [[path: "${ALLURE_RESULTS}"]]
-                        ])
-                    }
-                }
+                // The plugin consumes 'results' (allure-results), not the generated html
+                allure([
+                    includeProperties: false,
+                    reportBuildPolicy: 'ALWAYS',
+                    results: [[path: "testreports/allure-results"]] // relative path with forward slash is fine too
+                ])
+            }
+        }
+
+        stage('Archive Generated HTML (optional)') {
+            steps {
+                // Useful for downloading/opening the standalone report outside Jenkins plugin
+                // Adjust glob if needed
+                archiveArtifacts artifacts: 'allure-report/**', fingerprint: true, allowEmptyArchive: false
             }
         }
     }
 
     post {
         always {
-            echo "Pipeline finished. Workspace not cleaned to preserve venv."
-        }
-        success {
-            echo "Pipeline executed successfully!"
-        }
-        failure {
-            echo "Pipeline failed. Check logs for details."
+            echo "Pipeline run completed."
+            // IMPORTANT: Do NOT clean workspace here, or the publish/archive can break.
+            // If you must clean, do it at the start of the NEXT build (we already do).
         }
     }
 }

@@ -1,61 +1,158 @@
-pytest-ragas-llm-evaluator
-This repository provides a Pytest-based framework designed to evaluate Retrieval-Augmented Generation (RAG) based Large Language Models (LLMs). This tool helps developers and researchers validate the performance, accuracy, and reliability of custom LLM architectures using structured tests and industry-standard metrics.
+# 📘 ragas-openai-pytest-llm-evaluator
 
-💡Overview
-This framework enables end-to-end evaluation of RAG pipelines, covering:
+A powerful **Pytest-based evaluation framework** for analyzing Retrieval-Augmented Generation (RAG) pipelines and Large Language Models (LLMs).  
+This tool enables robust testing of **retrieval**, **augmentation**, and **generation** stages using industry-leading metrics from **RAGAS**, **LangChain**, and **OpenAI**.
 
-Retrieval Modules
-Augmentation Modules
-Generation Modules
-It integrates with the RAGAS library, OpenAI, and Langchain to deliver actionable insights on LLM performance.
+---
 
-⚙️ Tech stack
-Python
-Pytest
-RAGAS Library
-OpenAI API
-Langchain
-📊 Evaluation Metrics
-✅ Context Precision
-✅ Context Recall
-✅ Context Entity Recall
-✅ Faithfulness
-✅ Factual Correctness
-✅ Response Relevancy
-✅ Topic Adherence
-✅ Rubrics Score
-✅ Noise Sensitivity
-✅ Answer Accuracy
-✅ Context Relevance
-✅ Semantic Similarity
-✅ Response Groundedness
-✅ Context Relevance
-🔍 Features
-1️⃣ Multi-Stage Testing Scope
+# 📑 Contents
+1. [Overview](#overview)
+2. [Features](#features)
+3. [Tech Stack](#tech-stack)
+4. [Evaluation Metrics](#evaluation-metrics)
+5. [Dataset Generation](#dataset-generation)
+6. [Repository Structure](#repository-structure)
+7. [Execution Commands](#execution-commands)
+8. [SonarQube Integration](#sonarqube-integration)
+9. [Jenkins Pipeline (CI/CD)](#jenkins-pipeline-cicd)
 
-Test your RAG system at each stage — retrieval, augmentation, and generation — to identify weaknesses early.
+---
 
-3️⃣ Multiple Metrics Evaluation
+# 💡 Overview
 
-Leverage EvalDataSet to calculate and benchmark LLM responses against ground truth data using multiple metrics.
+This framework allows developers and researchers to perform **end-to-end evaluation** of RAG-based pipelines, ensuring quality across the following stages:
 
-4️⃣ Multi-Conversational Scenarios
+- **Retrieval Evaluation**
+- **Augmentation Evaluation**
+- **Generation Evaluation**
 
-Simulate real-world multi-turn conversations to test your LLM’s consistency and contextual understanding.
+It integrates seamlessly with:
 
-5️⃣ Synthetic Test Data
+- **RAGAS** — Metric evaluation  
+- **LangChain** — LLM orchestration  
+- **OpenAI** — Model execution  
+- **Allure** — Test reporting  
 
-Generate synthetic question-answer pairs to stress-test your LLM’s capabilities.
+### 📊 RAG Evaluation Flow
 
-6️⃣ Test Optimization
+![RAG Pipeline](utilities/images/img.png)
 
-All tests are designed with pytest standards, making it easy to extend, automate, and integrate into CI/CD pipelines.
+---
 
-📂 Repository Structure
-pytest-rag-llm-evaluator/
-├── tests/                # Pytest test cases
-├── data/                 # Synthetic & real datasets
-├── utils/                # Utility functions for data generation and processing
-├── configs/              # Config files for different LLM setups
-├── README.md             # Project documentation
-└── requirements.txt      # Dependencies
+# 🚀 Features
+
+### 1️⃣ Multi-Stage Testing  
+Evaluate retrieval, augmentation, and generation independently.
+
+### 2️⃣ Rich Metric Coverage  
+Includes all major RAGAS **singleton** and **multi-turn** metrics.
+
+### 3️⃣ Multi-Turn Conversation Support  
+Evaluate consistency, context retention, and topic adherence.
+
+### 4️⃣ Synthetic Dataset Generation  
+Generate both **single-turn** and **multi-turn** datasets easily.
+
+### 5️⃣ CI/CD Friendly  
+Supports **SonarQube** code quality and **Jenkins** automation.
+
+---
+
+# ⚙️ Tech Stack
+
+| Component | Purpose |
+|----------|---------|
+| **Python** | Core implementation |
+| **Pytest** | Test execution |
+| **LangChain** | LLM orchestration |
+| **OpenAI** | Model integration |
+| **RAGAS Library** | Evaluation metrics |
+| **Allure** | Test reporting |
+
+---
+
+# 📊 Evaluation Metrics
+
+## 🔹 Singleton Metrics
+- Faithfulness  
+- Context Precision  
+- Context Recall  
+- Answer Relevancy  
+- Factual Correctness  
+- Rubric Score  
+
+## 🔸 Multi-Turn Metrics
+- Aspect Critic  
+- Topic Adherence Score  
+- Rubric Score  
+- Conversational Memory Score  
+
+---
+
+# 🧪 Dataset Generation
+
+Supports creation of structured datasets for evaluation:
+
+### **1. Single-Turn Dataset**
+- Q/A pairs  
+- Ground truth  
+- Knowledge chunks  
+
+### **2. Multi-Turn Dataset**
+- Conversation flows  
+- Follow-up questions  
+- Context evolution  
+
+---
+
+# 📂 Repository Structure
+
+ragas-openai-pytest/
+│
+├── tests/ # All pytest test cases
+│ ├── test_loyalty_tier_offers.py # Singleton RAGAS tests
+│ ├── test_rest_assured.py # Multi-turn tests
+│ └── init.py
+│
+├── llm-base/ 
+│ ├── ragas_dataset_generator.py # to create single-turn and multi-turn datasets
+│ ├── ragas_metrics_evaluator.py # to evaluate various metrics
+│
+├── utilities
+│ ├── assertions.py
+│ ├── email_reporter.py
+│ ├── ironman.py
+│ ├── logger.py
+│ └── init.py
+│
+├── generate-datasets
+│ ├── generate_dataset.py # to create datasets
+│
+├── dataset
+│ ├── loyalty-tier-offers
+│ │ └── singleturn_dataset.json
+│ │ └── multiturn_dataset.json
+│ ├── rest_assured
+│ │ └── singleturn_dataset.json
+│ │ └── multiturn_dataset.json
+│
+├── feature_documents
+│ ├── loyalty-tier-offers
+│ ├── rest_assured
+│
+├── configs/ # Configurations for LLM/RAG
+│ ├── openai_config.yaml
+│ ├── rag_pipeline.yaml
+│ └── environment.yaml
+│
+├── utilities/ # Non-code assets
+│ ├── images/
+│ │ └── img.png # Diagram used in README
+│ └── logs/ # Log files (optional)
+│
+├── requirements.txt # Project dependencies
+├── conftest.py
+├── .jenkins
+├── sonar-project.properties
+├── README.md # Project documentation
+└── .gitignore

@@ -5,8 +5,93 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8b627e9-b58c-45e4-b4ce-24a071cab7f4" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/utilities/images/img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.jenkins" beforeDir="false" afterPath="$PROJECT_DIR$/.jenkins" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251118_120502.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251118_120845.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251118_125833.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251118_132226.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251118_132658.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251118_132950.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251118_133138.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251118_133309.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251118_133616.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251118_134735.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_095934.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_114336.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_114724.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_114845.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_115545.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_120039.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_122741.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_125509.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_125637.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_125940.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_130609.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_131316.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_143732.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_151944.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_155334.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_155742.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_160544.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_161431.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_173403.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_174628.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_175505.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_185737.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_193930.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251124_194632.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251128_121938.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251128_125623.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251128_130318.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Development_checkpoint_20251128_130629.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251118_120603.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251118_121012.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251118_125922.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251118_132230.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251118_132729.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251118_133209.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251118_133401.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251118_133706.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251118_134756.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251124_095937.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251124_114339.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251124_114809.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251124_114929.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251124_115730.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251124_120151.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251124_122935.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251124_125533.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251124_125814.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251124_130132.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251124_130758.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251124_131435.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251124_143832.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251124_152056.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251124_155447.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251124_155901.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251124_160653.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251124_161758.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251124_173804.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251124_175042.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251124_180149.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251124_190314.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251124_194400.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251124_194943.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251128_121952.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251128_125642.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251128_130334.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_20251128_132716.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/final_report.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/report_output/report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/Development_checkpoint_20251118_115802.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/Development_checkpoint_20251128_110900.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/Development_checkpoint_20251128_112327.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/report_20251118_115907.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/report_20251128_111038.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/report_20251128_112452.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +156,9 @@
       <recent name="C:\Users\SG0704235\PycharmProjects\ragas-openai-pytest\dataset\rest_assured" />
       <recent name="C:\Users\SG0704235\PycharmProjects\ragas-openai-pytest\dataset\flight_booking" />
       <recent name="C:\Users\SG0704235\PycharmProjects\ragas-openai-pytest\dataset\modify_booking" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\SG0704235\PycharmProjects\ragas-openai-pytest\utilities\images" />
     </key>
   </component>
   <component name="RunManager" selected="Python tests.Python tests for test_rest_assured.TestRestAssured.test_conversational_memory_score">
