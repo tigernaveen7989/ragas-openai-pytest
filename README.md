@@ -106,53 +106,54 @@ Supports creation of structured datasets for evaluation:
 ---
 
 # 📂 Repository Structure
-
+```
 ragas-openai-pytest/
 │
-├── tests/ # All pytest test cases
-│ ├── test_loyalty_tier_offers.py # Singleton RAGAS tests
-│ ├── test_rest_assured.py # Multi-turn tests
-│ └── init.py
+├── tests/                     # All pytest test cases
+│   ├── test_loyalty_tier_offers.py   # Singleton RAGAS tests
+│   ├── test_rest_assured.py          # Multi-turn tests
+│   └── __init__.py
 │
-├── llm-base/ 
-│ ├── ragas_dataset_generator.py # to create single-turn and multi-turn datasets
-│ ├── ragas_metrics_evaluator.py # to evaluate various metrics
+├── llm-base/                  # Core logic for dataset generation & evaluation
+│   ├── ragas_dataset_generator.py    # Create single-turn & multi-turn datasets
+│   ├── ragas_metrics_evaluator.py    # Evaluate various RAG metrics
 │
-├── utilities
-│ ├── assertions.py
-│ ├── email_reporter.py
-│ ├── ironman.py
-│ ├── logger.py
-│ └── init.py
+├── utilities/                 # Helper utilities
+│   ├── assertions.py
+│   ├── email_reporter.py
+│   ├── ironman.py
+│   ├── logger.py
+│   └── __init__.py
 │
-├── generate-datasets
-│ ├── generate_dataset.py # to create datasets
+├── generate-datasets/
+│   ├── generate_dataset.py           # Script to create datasets
 │
-├── dataset
-│ ├── loyalty-tier-offers
-│ │ └── singleturn_dataset.json
-│ │ └── multiturn_dataset.json
-│ ├── rest_assured
-│ │ └── singleturn_dataset.json
-│ │ └── multiturn_dataset.json
+├── dataset/                   # Pre-generated datasets
+│   ├── loyalty-tier-offers/
+│   │   ├── singleturn_dataset.json
+│   │   └── multiturn_dataset.json
+│   ├── rest_assured/
+│   │   ├── singleturn_dataset.json
+│   │   └── multiturn_dataset.json
 │
-├── feature_documents
-│ ├── loyalty-tier-offers
-│ ├── rest_assured
+├── feature_documents/         # Source documents for RAG
+│   ├── loyalty-tier-offers/
+│   ├── rest_assured/
 │
-├── configs/ # Configurations for LLM/RAG
-│ ├── openai_config.yaml
-│ ├── rag_pipeline.yaml
-│ └── environment.yaml
+├── configs/                   # Configurations for LLM/RAG
+│   ├── openai_config.yaml
+│   ├── rag_pipeline.yaml
+│   └── environment.yaml
 │
-├── utilities/ # Non-code assets
-│ ├── images/
-│ │ └── img.png # Diagram used in README
-│ └── logs/ # Log files (optional)
+├── utilities/                 # Non-code assets
+│   ├── images/
+│   │   └── img.png            # Diagram used in README
+│   └── logs/                  # Log files (optional)
 │
-├── requirements.txt # Project dependencies
+├── requirements.txt           # Project dependencies
 ├── conftest.py
-├── .jenkins
-├── sonar-project.properties
-├── README.md # Project documentation
+├── .jenkins                   # Jenkins pipeline configs
+├── sonar-project.properties   # SonarQube configuration
+├── README.md                  # Project documentation
 └── .gitignore
+```
