@@ -104,34 +104,43 @@ Supports creation of structured datasets for evaluation:
 - Context evolution  
 
 ---
-## ✅ How to Use
+# ✅ How to Use
 
-1. **Clone the Repository**
-   ```bash
+## 1. Clone the Repository
+
+``` bash
 git clone <your-repo-url>
 cd ragas-openai-pytest
 ```
 
-2. **Configure Environment**
-   - Open the `.env` file.
-   - Replace the required details (e.g., API keys, model configs).
+## 2. Configure Environment
 
-3. **Install Dependencies**
-   ```bash
+Update the `.env` file:
+
+    OPENAI_API_KEY=your_key
+    RAG_PIPELINE_CONFIG=configs/rag_pipeline.yaml
+    OPENAI_CONFIG=configs/openai_config.yaml
+
+## 3. Install Dependencies
+
+``` bash
 pip install -r requirements.txt
 ```
 
-4. **Run Tests**
-   - Execute all tests using:
-     ```bash
+## 4. Run Tests
+
+Run all evaluation tests: pytest
+
+``` bash
 pytest
 ```
-   - For detailed reports, use:
-     ```bash
+
+Generate Allure test report:
+
+``` bash
 pytest --alluredir=reports/
 ```
 
----
 # 📂 Repository Structure
 ```
 ragas-openai-pytest/
