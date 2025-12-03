@@ -104,7 +104,34 @@ Supports creation of structured datasets for evaluation:
 - Context evolution  
 
 ---
+## ✅ How to Use
 
+1. **Clone the Repository**
+   ```bash
+git clone <your-repo-url>
+cd ragas-openai-pytest
+```
+
+2. **Configure Environment**
+   - Open the `.env` file.
+   - Replace the required details (e.g., API keys, model configs).
+
+3. **Install Dependencies**
+   ```bash
+pip install -r requirements.txt
+```
+
+4. **Run Tests**
+   - Execute all tests using:
+     ```bash
+pytest
+```
+   - For detailed reports, use:
+     ```bash
+pytest --alluredir=reports/
+```
+
+---
 # 📂 Repository Structure
 ```
 ragas-openai-pytest/
