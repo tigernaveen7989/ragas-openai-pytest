@@ -117,9 +117,7 @@ cd ragas-openai-pytest
 
 Update the `.env` file:
 
-    OPENAI_API_KEY=your_key
-    RAG_PIPELINE_CONFIG=configs/rag_pipeline.yaml
-    OPENAI_CONFIG=configs/openai_config.yaml
+    Update OPENAI_API_KEY, LANGCHAIN_API_KEY, SMTP_HOST, SMTP_PORT_NUMBER, EMAIL_SENDER, EMAIL_RECEIVER Details
 
 ## 3. Install Dependencies
 
