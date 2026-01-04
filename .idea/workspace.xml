@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f8b627e9-b58c-45e4-b4ce-24a071cab7f4" name="Changes" comment="initial commit">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,51 +25,68 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="34xSkIIM7DZKH44REcgU5tyWj5f" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Python tests.Python tests for test_flight_booking.TestFlightBooking.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_flight_booking.TestFlightBooking.test_flight_booking.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_generate_dataset.TestRagasDatasetGenerator.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_generate_dataset.TestRagasDatasetGenerator.test_generate_dynamic_dataset.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_generate_dataset.TestRagasDatasetGenerator.test_generate_multiturn_dataset.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_loyalty_tier_offers.TestGenerateRagasDataset.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_loyalty_tier_offers.TestGenerateRagasDataset.test_generate_dataset.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_answer_relevancy.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_context_precision.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_context_recall.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_factual_correctness.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_faithfulness.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_rubric_score.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_loyalty_tier_offers.TestRagasDatasetGenerator (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_loyalty_tier_offers.TestRagasDatasetGenerator.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_loyalty_tier_offers.TestRagasDatasetGenerator.test_generate_dynamic_dataset.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_rest_assured.TestRestAssured.test_answer_relavancy.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_rest_assured.TestRestAssured.test_aspect_critic.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_rest_assured.TestRestAssured.test_conversational_memory_score.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_rest_assured.TestRestAssured.test_faithfulness.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_rest_assured.TestRestAssured.test_rubric_score.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_rest_assured.TestRestAssured.test_top_adherence_score.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_flight_booking.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_loyalty_tier_offers.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_loyalty_tier_offers.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/SG0704235/PycharmProjects/llm-examples/llm-examples&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python tests.Python tests for test_flight_booking.TestFlightBooking.executor": "Run",
+    "Python tests.Python tests for test_flight_booking.TestFlightBooking.test_flight_booking.executor": "Run",
+    "Python tests.Python tests for test_generate_dataset.TestRagasDatasetGenerator.executor": "Run",
+    "Python tests.Python tests for test_generate_dataset.TestRagasDatasetGenerator.test_generate_dynamic_dataset.executor": "Run",
+    "Python tests.Python tests for test_generate_dataset.TestRagasDatasetGenerator.test_generate_multiturn_dataset.executor": "Run",
+    "Python tests.Python tests for test_loyalty_tier_offers.TestGenerateRagasDataset.executor": "Run",
+    "Python tests.Python tests for test_loyalty_tier_offers.TestGenerateRagasDataset.test_generate_dataset.executor": "Run",
+    "Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.executor": "Run",
+    "Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_answer_relevancy.executor": "Run",
+    "Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_context_precision.executor": "Run",
+    "Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_context_recall.executor": "Run",
+    "Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_factual_correctness.executor": "Run",
+    "Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_faithfulness.executor": "Run",
+    "Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_rubric_score.executor": "Run",
+    "Python tests.Python tests for test_loyalty_tier_offers.TestRagasDatasetGenerator (1).executor": "Run",
+    "Python tests.Python tests for test_loyalty_tier_offers.TestRagasDatasetGenerator.executor": "Run",
+    "Python tests.Python tests for test_loyalty_tier_offers.TestRagasDatasetGenerator.test_generate_dynamic_dataset.executor": "Run",
+    "Python tests.Python tests for test_rest_assured.TestRestAssured.test_answer_relavancy.executor": "Run",
+    "Python tests.Python tests for test_rest_assured.TestRestAssured.test_aspect_critic.executor": "Run",
+    "Python tests.Python tests for test_rest_assured.TestRestAssured.test_conversational_memory_score.executor": "Run",
+    "Python tests.Python tests for test_rest_assured.TestRestAssured.test_faithfulness.executor": "Run",
+    "Python tests.Python tests for test_rest_assured.TestRestAssured.test_rubric_score.executor": "Run",
+    "Python tests.Python tests for test_rest_assured.TestRestAssured.test_top_adherence_score.executor": "Run",
+    "Python tests.Python tests for tests.test_loyalty_tier_offers.TestLoyaltyTierOffers.test_faithfulness.executor": "Run",
+    "Python tests.Python tests for tests.test_rest_assured.TestRestAssured.executor": "Run",
+    "Python tests.Python tests for tests.test_rest_assured.TestRestAssured.test_aspect_critic.executor": "Run",
+    "Python tests.Python tests in test_flight_booking.py.executor": "Run",
+    "Python tests.Python tests in test_loyalty_tier_offers.py.executor": "Run",
+    "Python.test_loyalty_tier_offers.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/SG0704235/PycharmProjects/llm-examples/llm-examples",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\SG0704235\PycharmProjects\ragas-openai-pytest\dataset\rest_assured" />
@@ -78,52 +97,7 @@
       <recent name="C:\Users\SG0704235\PycharmProjects\ragas-openai-pytest\utilities\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_rest_assured.TestRestAssured.test_rubric_score">
-    <configuration name="Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_context_precision" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="ragas-openai-pytest" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_loyalty_tier_offers.TestLoyaltyTierOffers.test_context_precision&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_faithfulness" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="ragas-openai-pytest" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_loyalty_tier_offers.TestLoyaltyTierOffers.test_faithfulness&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_rubric_score" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="ragas-openai-pytest" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_loyalty_tier_offers.TestLoyaltyTierOffers.test_rubric_score&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Python tests for tests.test_loyalty_tier_offers.TestLoyaltyTierOffers.test_faithfulness">
     <configuration name="Python tests for test_rest_assured.TestRestAssured.test_conversational_memory_score" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="ragas-openai-pytest" />
       <option name="ENV_FILES" value="" />
@@ -134,6 +108,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_rest_assured.TestRestAssured.test_conversational_memory_score&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
@@ -149,25 +124,75 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_rest_assured.TestRestAssured.test_rubric_score&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for tests.test_loyalty_tier_offers.TestLoyaltyTierOffers.test_faithfulness" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="ragas-openai-pytest" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_loyalty_tier_offers.TestLoyaltyTierOffers.test_faithfulness&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.test_rest_assured.TestRestAssured" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="ragas-openai-pytest" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_rest_assured.TestRestAssured&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.test_rest_assured.TestRestAssured.test_aspect_critic" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="ragas-openai-pytest" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_rest_assured.TestRestAssured.test_aspect_critic&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for tests.test_loyalty_tier_offers.TestLoyaltyTierOffers.test_faithfulness" />
+        <item itemvalue="Python tests.Python tests for tests.test_rest_assured.TestRestAssured.test_aspect_critic" />
+        <item itemvalue="Python tests.Python tests for tests.test_rest_assured.TestRestAssured" />
         <item itemvalue="Python tests.Python tests for test_rest_assured.TestRestAssured.test_rubric_score" />
         <item itemvalue="Python tests.Python tests for test_rest_assured.TestRestAssured.test_conversational_memory_score" />
-        <item itemvalue="Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_context_precision" />
-        <item itemvalue="Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_faithfulness" />
-        <item itemvalue="Python tests.Python tests for test_loyalty_tier_offers.TestLoyaltyTierOffers.test_rubric_score" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-5b207ade9991-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.17890.14" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-PY-252.27397.106" />
+        <option value="bundled-python-sdk-4e2b1448bda8-9a97661f3031-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.27397.106" />
       </set>
     </attachedChunks>
   </component>
@@ -179,6 +204,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762153871554</updated>
+      <workItem from="1766034815783" duration="1197000" />
+      <workItem from="1767534315466" duration="554000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -190,6 +217,9 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -206,5 +236,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial commit" />
     <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ragas_openai_pytest$.coverage" NAME=" Coverage Results" MODIFIED="1767534459296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
